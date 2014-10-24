@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_lite_fr.rng" 
+            type="application/xml" 
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!-- 
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+    Programme du stage TEI de l'ENC
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+-->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="fre" type="main">Programme du stage</title>
+                <author>Emmanuel Château</author>
+            </titleStmt>
+            <editionStmt>
+                <edition n="1">première édition électronique, <date when="2014"
+                        >2014</date></edition>
+            </editionStmt>
+            <extent><!-- TODO : taille du fichier en octet --></extent>
+            <!-- information sur la publication électronique -->
+            <publicationStmt>
+                <publisher>publicarchitectura</publisher>
+                <date when="2013">2013</date>
+                <availability status="restricted">
+                    <p>Ce document est mis à disposition selon les termes de la <ref
+                        target="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"
+                        >Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC-BY-SA-NC 4.0)</ref>.</p>
+                    </availability>
+                <idno>programme</idno>
+            </publicationStmt>
+            <seriesStmt>
+                <title xml:lang="fre" type="main"
+                    >Initiation à l'édition électronique et à la pratique de l'encodage XML-TEI</title>
+                <title xml:lang="fre" type="sub"
+                    >Formation continue de l'École nationale des chartes, 27, 28, 29 et 30 octobre 2014</title>
+                <idno type="URI"
+                    >https://github.com/emchateau/formEnc2014-10</idno>
+            </seriesStmt>
+            <sourceDesc>
+                <p xml:id="programme">Document nativement numérique</p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation when="2014">2014</creation>
+            <langUsage>
+                <language ident="fre" usage="100"
+                    >Français (langue principale)</language>
+            </langUsage>
+            <textClass>
+                <keywords xml:lang="fre"
+                    scheme="http://data.bnf.fr/liste-rameau">
+                    <term>Édition savante électronique</term>
+                    <term>Enseignement -- Matériel didactique</term>
+                </keywords>
+                <keywords xml:lang="eng"
+                    scheme="http://id.loc.gov/authorities/about.html#lcsh">
+                    <term>Scholarly electronic publishing</term>
+                    <term>Teaching -- Outlines, syllabi, etc</term>
+                </keywords>
+                <classCode
+                    scheme="http://dublincore.org/documents/2012/06/14/dcmi-terms/">
+                    <term>Text</term>
+                </classCode>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-10-18" who="#EC">Création du fichier</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <titlePage>
+                <docTitle>
+                    <titlePart>Programme du stage</titlePart>
+                </docTitle>
+                <docAuthor>
+                    <persName ref="#EC">Emmanuel Château</persName>
+                </docAuthor>
+                <docDate>octobre 2014</docDate>
+            </titlePage>
+        </front>
+        <body>
+            <div xml:lang="fre">
+                <p>La formation a lieu dans la salle de cours informatique de l'École nationale des chartes à l'Hôtel de Rohan aux Archives nationales. Les accès étant sécurisés, assurez-vous de disposer du badge pour entrer.</p>
+                <list type="gloss">
+                    <label>lundi 27 octobre</label>
+                    <item>
+                        <list>
+                            <item>09h00 – 09h30 : Présentations et introduction</item>
+                            <item>09h30 – 10h45 : Un rapide panorama de l'édition numérique avec TEI</item>
+                            <item>10h45 – 11h45 : Les technologies XML</item>
+                            <item>11h45 – 12h30 : TP et Prise en main d'Oxygen</item>
+                        </list>
+                        <list>
+                            <item>14h00 – 14h30 : Présentation de la Text Encoding Initiative</item>
+                            <item>14h30 – 15h00 : Utilisation des <hi
+                                    rend="italic">Guidelines</hi></item>
+                            <item>15h00 – 15h30 : Présentation des éléments de la macrostructure</item>
+                            <item>15h30 – 16h00 : TP macrostructure</item>
+                        </list>
+                    </item>
+                </list>
+                <list type="gloss">
+                    <label>mardi 28 octobre</label>
+                    <item>
+                        <list>
+                            <item>09h00 – 10h00 : Autres éléments pour l'édition critique (certitude, etc.)</item>
+                            <item>10h00 – 11h00 : TP</item>
+                            <item>10h45 – 11h45 : Les mains et les témoins</item>
+                            <item>11h45 – 12h30 : TP</item>
+                        </list>
+                        <list>
+                            <item>14h00 – 14h30 : Le TEI header</item>
+                            <item>14h30 – 15h00 : TP</item>
+                            <item>15h00 – 15h30 : Traitement des corpus</item>
+                            <item>15h30 – 16h00 : Liens</item>
+                        </list>
+                    </item>
+                </list>
+                <list type="gloss">
+                    <label>mercredi 29 octobre</label>
+                    <item>
+                        <list>
+                            <item>09h00 - 12h00 : Personnalisation de la TEI</item>
+                        </list>
+                        <list>
+                            <item>14h00 - 16h00 : Naviguer dans ses documents avec XPath</item>
+                        </list>
+                    </item>
+                </list>
+                <list type="gloss">
+                    <label>jeudi 30 octobre</label>
+                    <item><list>
+                            <item>09h00 - 16h00 : XSLT</item>
+                        </list></item>
+                </list>
+            </div>
+        </body>
+        <back>
+            <div xml:lang="fre">
+                <div type="notes">
+                    <head>Notes</head>
+                    <note xml:id="nxxx">
+                        <p/>
+                    </note>
+                </div>
+                <div type="figures">
+                    <head>Liste des figures</head>
+                    <figure xml:id="id000" type="illustration">
+                        <figDesc>
+                            <title>Intitulé</title>
+                            <desc/>
+                        </figDesc>
+                        <graphic n="thumb" url="../image/thumb/file.jpg"
+                            mimeType="image/jpeg"/>
+                        <graphic n="full" url="../../images/full/file.jpg"
+                            mimeType="image/jpeg"/>
+                    </figure>
+                </div>
+            </div>
+        </back>
+    </text>
+</TEI>

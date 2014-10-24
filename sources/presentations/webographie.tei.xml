@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="../schema/tei_lite_fr.rng" 
+            type="application/xml" 
+            schematypens="http://relaxng.org/ns/structure/1.0"?>
+<!-- 
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+    Programme du stage TEI de l'ENC
+   @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+-->
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title xml:lang="fre" type="main">Webographie</title>
+                <author>Emmanuel Château</author>
+            </titleStmt>
+            <editionStmt>
+                <edition n="1">première édition électronique, <date when="2014"
+                        >2014</date></edition>
+            </editionStmt>
+            <extent><!-- TODO : taille du fichier en octet --></extent>
+            <!-- information sur la publication électronique -->
+            <publicationStmt>
+                <publisher>publicarchitectura</publisher>
+                <date when="2013">2013</date>
+                <availability status="restricted">
+                    <p>Ce document est mis à disposition selon les termes de la <ref
+                        target="http://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr"
+                        >Licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International (CC-BY-SA-NC 4.0)</ref>.</p>
+                    </availability>
+                <idno>programme</idno>
+            </publicationStmt>
+            <seriesStmt>
+                <title xml:lang="fre" type="main"
+                    >Initiation à l'édition électronique et à la pratique de l'encodage XML-TEI</title>
+                <title xml:lang="fre" type="sub"
+                    >Formation continue de l'École nationale des chartes, 27, 28, 29 et 30 octobre 2014</title>
+                <idno type="URI"
+                    >https://github.com/emchateau/formEnc2014-10</idno>
+            </seriesStmt>
+            <sourceDesc>
+                <p xml:id="programme">Document nativement numérique</p>
+            </sourceDesc>
+        </fileDesc>
+        <profileDesc>
+            <creation when="2014">2014</creation>
+            <langUsage>
+                <language ident="fre" usage="100"
+                    >Français (langue principale)</language>
+            </langUsage>
+            <textClass>
+                <keywords xml:lang="fre"
+                    scheme="http://data.bnf.fr/liste-rameau">
+                    <term>Édition savante électronique</term>
+                    <term>Enseignement -- Matériel didactique</term>
+                </keywords>
+                <keywords xml:lang="eng"
+                    scheme="http://id.loc.gov/authorities/about.html#lcsh">
+                    <term>Scholarly electronic publishing</term>
+                    <term>Teaching -- Outlines, syllabi, etc</term>
+                </keywords>
+                <classCode
+                    scheme="http://dublincore.org/documents/2012/06/14/dcmi-terms/">
+                    <term>Text</term>
+                </classCode>
+            </textClass>
+        </profileDesc>
+        <revisionDesc>
+            <change when="2014-10-18" who="#EC">Création du fichier</change>
+        </revisionDesc>
+    </teiHeader>
+    <text>
+        <front>
+            <titlePage>
+                <docTitle>
+                    <titlePart>Webographie</titlePart>
+                </docTitle>
+                <docAuthor>
+                    <persName ref="#EC">Emmanuel Château</persName>
+                </docAuthor>
+                <docDate>octobre 2014</docDate>
+            </titlePage>
+        </front>
+        <body>
+            <div xml:lang="fre">
+                <head>XML, XPath, XSL</head>
+                <p>http://xmlfr.org</p>
+                <p/>
+            </div>
+            <div>
+                <head/>
+                <p>Consortium Cahier, http://www.cahier.paris-sorbonne.fr</p>
+                <p>Éditions en ligne de l'École nationale des chartes, http://elec.enc.sorbonne.fr</p>
+                <p>Bibliothèques Humanistes Virtuelles, http://www.bvh.univ-tours.fr</p>
+                <p>Biblissima, un observatoire du patrimoine écrit du Moyen Âge et de la Renaissance (Equipex), http://www.biblissima-condorcet.fr</p>
+                <p>Observatoire de la vie littéraire (Labex Obvil), http://obvil.paris-sorbonne.fr</p>
+                <p>ITEM, Équipe Humanités numériques – Communautés savantes, éditions scientifiques sur Internet, http://www.item.ens.fr/index.php?id=578553</p>
+            </div>
+            <div>
+                <head>TEI</head>
+                <p>Teach Yourself TEI, http://www.tei-c.org/Support/Learn/tutorials.xml</p>
+                <p>TEI Guidelines, http://www.tei-c.org/Guidelines/</p>
+                <p>Van den Branden Ron et Vanhoutte Edward ed., TEI By Example, [URL : http://www.teibyexample.org] (Online tutorial site providing practical exercises and examples for the full range of TEI (P4) modules.)</p>
+                <p>Bertrand Lauranne, Demonet Marie Luce,Fins Jorge ed., Manuel d’encodage XML-TEI. Renaissance et temps modernes (Imprimés - manuscrits), [URL : http://www.bvh.univ-tours.fr/XML-TEI/index.asp] (Detailed encoding manual for early print materials; in French.)</p>
+                <p>Bodard Gabriel, Elliott Tom et Mylonas Elli ed., EpiDoc Guidelines: Ancient documents in TEI XML, [URL : http://www.stoa.org/epidoc/gl/latest/] (Detailed encoding manual for epigraphical and other ancient primary source materials.)</p>
+                <p>Burnard Lou, Sperberg-McQueen C.M., August 2012, TEI Lite: Encoding for Interchange: an introduction to the TEI: final revised edition for TEI P5, [URL : http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_lite.doc.html] (The original one stop generic tutorial introduction to using the TEI. Also available in a French translation by Sophie David and Lou Burnard) [URL : http://www.tei-c.org/release/doc/tei-p5-exemplars/html/tei_lite_fr.doc.html])</p>
+                <p>Dalmau Michelle et Hawkins Kevin ed., Best Practices for TEI in Libraries, [URL : http://purl.oclc.org.gate3.inist.fr/NET/teiinlibraries] (Detailed specification of a subset of TEI appropriate for use in capture of primary sources for digital library work.)</p>
+                <p>Flanders Julia et Bauman Syd ed., 2007, Women Writers Project Guide to Scholarly Text Encoding, [URL : http://www.wwp.brown.edu/research/publications/guide/] (Website providing documentation and guidance on using the TEI for the encoding of early printed books.)</p>
+                <p>Unsworth John et O’Brien O’Keeffe Katherine et Burnard Lou ed., 2006, Electronic Textual Editing, New York, Modern Languages Association, (Collection of articles by 24 leading practioners covering all aspects of electronic textual editing within the TEI paradigm. An early version is available from the TEI website.)</p>
+                <p>Wittern Christian, Tuohy Conal, Ciula Arianna, 2009, «The making of TEI P5» Literary and Linguistic Computing, vol. 24, no. 3, p. 281-96 [URL : http://dx.doi.org.gate3.inist.fr/10.1093/llc/fqp017] (Detailed report on the editorial work leading up to the first edition of TEI P5.)</p>
+                <p>Ide Nancy et Veronis Jean ed., 1995, The Text Encoding Initiative: Background and Contexts, Dordrecht, Boston, Kluwer Academic Publisher, (Essential collection of 17 articles originally published as a double issue of Computers and the Humanities in 1994. Major TEI contributors of the first generation provide overviews of the TEI approach to encoding specific text types, complemented by classic articles on TEI objectives and design, and on SGML. ) </p>
+            </div>
+            <div>
+                <head>Blogs et divers</head>
+                <p>Edotique, http://ecdotique.hypotheses.org, Carnet de recherche consacré à l'art d'éditer les sources anciennes, de l'Antiquité au Moyen Âge – essentiellement les textes de la littérature grecque et latine –, avec une ouverture sur l'épigraphie et l'édition numérique.</p>
+                <p>Philologie à venir Textes (anciens) et humanités numériques, http://philologia.hypotheses.org, Carnet d'Aurélien Berra qui s'intéresse au renouvellement que suscitent les technologies informatiques dans l’étude des textes, notamment des textes grecs et latins.</p>
+            </div>
+        </body>
+        <back>
+            <div xml:lang="fre">
+                <div type="notes">
+                    <head>Notes</head>
+                    <note xml:id="nxxx">
+                        <p/>
+                    </note>
+                </div>
+                <div type="figures">
+                    <head>Liste des figures</head>
+                    <figure xml:id="id000" type="illustration">
+                        <figDesc>
+                            <title>Intitulé</title>
+                            <desc/>
+                        </figDesc>
+                        <graphic n="thumb" url="../image/thumb/file.jpg"
+                            mimeType="image/jpeg"/>
+                        <graphic n="full" url="../../images/full/file.jpg"
+                            mimeType="image/jpeg"/>
+                    </figure>
+                </div>
+            </div>
+        </back>
+    </text>
+</TEI>
