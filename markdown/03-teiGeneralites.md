@@ -139,7 +139,7 @@ name: historique1
 
 .right-column[
 
-## Un projet collectif
+# Un projet collectif
 - [Association for Computers in the Humanities](http://ach.org)
 - [Association for Literary and Linguistic Computing](http://eadh.org)
 - [Association for Computational Linguistics](http://www.aclweb.org)
@@ -198,7 +198,7 @@ name: historique2
 
 .right-column[
 
-## Développements du projet
+# Développements du projet
 
 ### Création de groupes de travail disciplinaires
 
@@ -337,6 +337,9 @@ name: miseEnOeuvre
 .right-column[
 
 ## Publication de recommandations
+- simples
+- faciles à employer
+- compréhensibles
 
 ## Généricité
 
@@ -348,7 +351,7 @@ name: miseEnOeuvre
 
 ???
 
-Rapidement la TEI a privilégié la publication de recommandations plutôt que celle d’un standard ou d’une norme.
+Rapidement **la TEI a privilégié la publication de recommandations** plutôt que celle d’un standard ou d’une norme.
 
 L’objectif était de spécifier des conventions d’encodage simples, faciles à employer, relativement compréhensibles, et qui fournissent d’amples mécanismes d’extension afin de pouvoir répondre à des besoins particuliers.
 
@@ -465,6 +468,31 @@ class: center middle
 
 # .red[3.] L'infrastructure de la TEI
 
+???
+
+Comme on l'a vu précédemment, la TEI peut donc se concevoir comme un cadre de travail technique, un framework, qui accompagne l’éditeur ou l’encodeur dans la structuration de l’information.
+
+Elle consiste en un ensemble de préconisations qui doivent être adaptées aux spécificités inhérentes à chaque projet éditorial.
+
+- Comme le relève Florence Clavaud, « cette modularité qui garantit la flexibilité du modèle et sa généralité, peut parfois dérouter l’encodeur inexpérimenté ou le confronter à des choix difficiles. » La définition des solutions d’encodage implique d’opérer des choix entre plusieurs solutions admissibles en en saisissant bien tous les tenants et les aboutissants.
+
+- Elle implique un aller-retour continuel entre les sources textuelles à traiter et la documentation de la TEI afin de réévaluer les solutions d’encodage envisagées.
+
+Ce besoin de personnalisation s’explique, d’une part parce que le texte est souvent un objet hétérogène, et d’autre part car l’encodeur ou l’éditeur peut avoir des objectifs différents.
+
+- Dans le cas d’un texte dramatique, il pourra se révéler nécessaire de trouver un moyen pour marquer les locuteurs.
+
+- Les éléments nécessaires pour traiter le discours oral ne seront sans doute pas les mêmes que ceux requis pour le traitement diplomatique.
+
+- On n’abordera pas un ensemble de textes composites ou un corpus de la même manière que des textes isolés.
+
+Ces différents cas de figure expliquent assez bien le besoin de métadonnées spécialisées pour décrire les contenus.
+
+
+Ce que propose la TEI c’est un ensemble de mécanismes pour les traiter. « Formellement parlant, les Guidelines fournissent à la fois des règles syntactiques sur la manière dont des éléments et des attributs doivent être utilisés dans des documents valides, mais aussi des recommandations sémantiques sur l’interprétation que l’on doit attacher à certaines constructions syntactiques. En ce sens, elle fournissent à la fois une définition de type de document, et une déclaration de type de document. Plus exactement, on peut distinguer le modèle abstrait de la TEI (TEI Abstract Model) qui définit un ensemble de concepts en rapport, et le schéma TEI (TEI schema) qui définit un ensemble de règles et de contraintes syntactiques.  »
+
+- cf. Sperberg-McQueen, C. Michael, Burnard, Lou, et Bauman, Syd, [TEI P5 : Guidelines for Electronic Text Encoding and Interchange](http://www.tei-c.org/Guidelines/P5/), 23.3.
+
 ---
 
 name: structure
@@ -477,11 +505,39 @@ name: structure
 
 # Modèle abstrait de données
 
+- qui définit un ensemble de concepts et de relations entre ces concepts
+
+- qui permet d'exprimer des définitions formelles (modèles de contenus)
+
 # Implémentations techniques du modèle
+
+- qui définissent l'ensemble des règles et contraintes syntaxiques sous forme de schémas XML ou de DTD
 
 ]
 
 ???
+
+Pour bien comprendre ce que propose la TEI, il convient de distinguer le modèle abstrait de données, des implémentations techniques du modèle.
+
+# Modèle abstrait de données
+
+- qui définit un ensemble de concepts et de relations entre ces concepts
+
+- qui permet d'exprimer des définitions formelles (modèles de contenus)
+
+# Implémentations techniques du modèle
+
+- qui définissent l'ensemble des règles et contraintes syntaxiques sous forme de schémas XML ou de DTD
+
+
+Ces deux composantes **forment ensemble les Guidelines**.
+Ces Guidelines expriment sous forment littérale ([Donald Knuth](http://www.literateprogramming.com)) le modèle abstrait de données, et propose des implémentations techniques du modèle.
+
+Si la conception de la TEI découle en grande partie des technologies XML, et que son infrastructure repose principalement sur ces technologies, la TEI pourrait tout aussi bien être exprimée par l'intermédiaire d'un autre véhicule si un nouveau formalisme technique devait s'imposer à l'avenir.
+
+---
+
+# Un cadre de travail flexible et modulaire
 
 ---
 
@@ -490,11 +546,39 @@ name: structure
 
 ???
 
+## Avantages
+
+Conçue comme un modèle générique de structuration et de sémantisation des textes, la TEI présente de nombreux avantages. On relève notamment :
+
+- sa modularité et sa flexibilité
+
+- son expressivité (niveau de granularité)
+
+- le fait qu’il s’agit d’un standard reconnu internationalement (interopérabilité, pérennité)
+
+- le fait qu’elle dispose des propriétés intrinsèques au modèle XML : séparation entre le contenu et a présentation, possibilité de générer plusieurs formats de sortie à partir d’une même source, bon candidat pour la pérennisation
+
+- son adaptation à l’édition électronique (croisement de sources, fac simili, hyperliens, etc.)
+
+- les possibilités de modulation de l’affichage et d’accessibilité, ses aspects économiques
+
+Mis à part le fait qu’elle soit rapidement apparue comme un standard de fait pour la publication de textes numériques en sciences humaines, ce sont d’abord ces qualités qui expliquent la large implantation de la TEI dans la communauté scientifique. Elle sert de format à de nombreux projets d’envergure internationale (Blake archive  , Perseus  , Rosetti  , etc.). Plusieurs projets français de grande envergure utilisent également la TEI dans le domaine des sciences historiques (BVH, Élec, le portail Telma, ENS Lyon, Desgodets, ANR Ampère, etc.).
+
+
+## S'approprier la TEI
+
 La TEI fournit ainsi, à l’aide d’un vocabulaire et d’une infrastructure technique, **un cadre de travail pour la modélisation des textes**. Dans la limite de leur expressivité, de tels modèles peuvent être employés à telles ou telles fins. La volonté de la TEI de couvrir l’ensemble des besoins a pour pendant négatif la nécessité de personnaliser son schéma. Et l’utilisation de la TEI suppose l’apprentissage de son vocabulaire.
 
 Cette difficulté d’accès, ainsi que la nécessité de manier des outils nouveaux, reste un problème qui n’est toujours pas complètement réglé. Cependant, la TEI a largement été adoptée aujourd’hui dans le secteur académique pour la publication de sources primaires ou l’édition numérique. C’est la raison pour laquelle on peut affirmer qu’elle constitue de ce point de vue un standard de fait qui justifie en grande partie son utilisation dans un projet scientifique d’édition.
 
-À de nombreux égards, le large emploi de la TEI est censé répondre à un désir d’interopérabilité et de pérennisation. La promesse des standards est de nous rendre la vie plus aisée : TEI, XML, Unicode ont le potentiel de faciliter l’échange et la réutilisation des documents, c’est notamment la raison pour laquelle on y a recours. Cependant, par sa généricité même, la nature profonde de la TEI qui nécessite d’opérer des choix, ou permet d’être étendue en fonction des besoins, explique en grande partie les difficultés que l’on peut rencontrer lorsqu’il s’agit de rassembler des collections de documents en termes de compatibilité. Il ne suffit pas que les textes soient tous encodés en TEI pour qu’ils soient véritablement interopérables. Chaque document est représentatif du modèle que se fait l’éditeur du texte. Ainsi, la compatibilité ne peut être atteinte que si plusieurs documents suivent le même ensemble de conventions.
+
+## Le problème de l'interopérabilité
+
+À de nombreux égards, le large emploi de la TEI est censé répondre à un **désir d’interopérabilité et de pérennisation**. La promesse des standards est de nous rendre la vie plus aisée : TEI, XML, Unicode ont le potentiel de faciliter l’échange et la réutilisation des documents, c’est notamment la raison pour laquelle on y a recours.
+
+Cependant, par sa généricité même, la nature profonde de la TEI qui nécessite d’opérer des choix, ou permet d’être étendue en fonction des besoins, explique en grande partie les difficultés que l’on peut rencontrer lorsqu’il s’agit de rassembler des collections de documents en termes de compatibilité.
+
+Il ne suffit pas que les textes soient tous encodés en TEI pour qu’ils soient véritablement interopérables. Chaque document est représentatif du modèle que se fait l’éditeur du texte. Ainsi, la compatibilité ne peut être atteinte que si plusieurs documents suivent le même ensemble de conventions.
 
 ---
 
