@@ -151,6 +151,8 @@ Lequel module fournit une série d’éléments employés pour spécifier un nou
 
 Un document ODD se présente comme un document XML-TEI courant comportant une en-tête TEI, un élément <front>, <body> et <back>, le schéma est défini au moyen d’un élément <schemaSpec> qui va contenir les déclarations. À partir d’un tel document, un processeur ODD sera en mesure de combiner les déclarations des modules désignés et de produire un schéma du type requis et éventuellement une documentation de tous les éléments choisis.
 
+Le module `tagdocs`, qui sert au modèle TEI à produire ses spécifications formelles mais dont peut se servir pour préciser les spécifications.
+
 ---
 
 ## Organisation de la TEI (rappel)

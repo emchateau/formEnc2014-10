@@ -265,11 +265,21 @@ Boot, Peter. ["Some Digital Editions and Some Remaining Challenges."](http://www
 
 ---
 
+# Orientations bibliographiques .inverse[(suite)]
+
+- Guyotjeannin, Olivier, and Olivier Poncet. _[L’édition électronique de sources d’archives médiévales et modernes, Quelques réflexions](https://intranet.enc.sorbonne.fr/files/20100315-Edition-electronique-intro-OGJ-OP.pdf)_. mars, 2010.
+
+- Bourgain, Pascale, and Françoise Vieillard (dir.), _Conseils Pour L'édition Des Textes Médiévaux_. Conseils généraux, Fascicule I. Documents d'archives, Fascicule II. Textes littéraires, Fascicule III. Paris: Comité des travaux historiques et scientifiques / École nationale des chartes, 2001-2002.
+
+- Barbiche, Bernard. _["Conseils Pour L’édition Des Textes De L’époque Moderne (XVIe-XVIIIe Siècle)"](http://theleme.enc.sorbonne.fr/cours/edition_epoque_moderne/edition_des_textes)_. Theleme (Techniques pour l'Historien en Ligne : Études, Manuels, Exercices).
+
+- Christine Nougaret et Elisabeth Parinet (dir.), _Conseils pour l'édition des textes de l'époque moderne_, École nationale des chartes, **à paraître en décembre 2014 (avec un chapitre de Florence Clavaud consacré à l'édition électronique) !!**.
+
+---
+
 template: inverse
 class: center middle
 
 # XML, [quésaco](02-xml.html) ?
 
 .left[.footnote[[revenir au début](#index)]]
-
----

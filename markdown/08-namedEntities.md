@@ -73,6 +73,10 @@ template: inverse
 
 L'élément person peut être instancié à l'intérieur d'un élément <persList> pour créer par exemple un fichier d'autorité dans un projet.
 
+Classe modele.namelike (comme un nom) regroupe des éléments qui se rapportent tous à un nom de personne ou de lieu. Les éléments appartenant à cette classe y figurent. Voit qu’une superclasse qui est composée de plusieurs classes dans lesquelles des éléments comme persname, name, etc.
+Comme il s’agit d’une classe, tous les éléments qui appartiennent à cette classe ont certaines propriétés.
+
+
 ## Formes du nom
 La forme du nom peut être fournies au moyen de l'élément <persName>
 

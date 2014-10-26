@@ -604,11 +604,61 @@ Outre ces trois modules, on fait fréquemment appel aux modules suivants `figure
 
 - Le module [figure](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html) est utilisé conjointement avec `transcr` pour traiter la description des facsimili.
 
-- [transcr](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html) est destiné à la transcription de manuscrit
+- [transcr](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html) est destiné à la transcription de manuscrit et à la transcription de sources primaires. Y trouvera par exemple des éléments pour signaler un passage rayé, un ajout dans la marge (glose marginale), une abréviation, etc.
 
-- [msdescription](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html) sert à la description de manuscrits.
+- [msdescription](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html) sert à la description de manuscrits. Quand fait une édition de texte, besoin de décrire la source que l’on édite, on y trouver les éléments nécessaires.
 
 Il est également possible d'utiliser le module `dictionaries` pour le traitement d'un glossaire.
+
+Module drama pour la transcription du texte oral pas la même chose que texte de base. Composante de temps.
+
+`textCrit` lorsque l'on a besoin d’encoder un apparat critique, quand étudie un texte qui a plusieurs témoins, plusieurs manuscrits qui constitue plusieurs leçons d’un texte transcrit (variantes) critical aparatus
+
+---
+
+# Se repérer sur le site du Consortium
+
+### http://www.tei-c.org
+
+### Consortium
+
+- Actualités
+
+- Groupes de travail
+
+- Wiki
+
+### Guidelines
+
+- Consultation des chapitres
+
+- Description des éléments
+
+- Classes
+
+???
+Un site web très touffu dans lequel on peut parfois se perdre. On peut accéder à la liste des membres. Vous avez également un lien vers le journal de le TEI dans le menu activités.
+
+Vous disposez également d’un WIKI sur la TEI qui est un regroupement de tutoriaux, projets de la TEI. Une liste des projets utilisant la TEI. Il n’est pas obligatoire de déclarer que l’on travailler avec TEI. C’est une démarche libre, puisqu’il s’agit d’un logiciel libre avec lequel on fait ce que l’on veut.
+
+Une partie du WIKI est consacrée aux outils. Si vous deviez démarrer un gros projet, c’est une bonne page pour déterminer les outils existants pour faire l’état de l’art. Mais, si un passage obligé, cette page n’est évidemment pas exhaustif.
+
+Les guidelines, mais aussi About avec une rubrique sur l’histoire du projet.
+La liste de discussion : il vous suffit de fournir votre nom et votre adresse email pour être abonné.
+
+Détail des guidelines
+
+- Consultation des chapitres
+
+- Navigation par élément
+
+- Consultation des classes
+
+- Outils
+
+Les parties concernant les spécifications formelles des guidelines ont fait l’objet de traduction par le groupe Afnor. Des exemples correspondants à la pratique française ont été introduits.
+
+En revanche le corps principal des guidelines n’existe qu’en une seule langue. Si vous commencez un projet, rien ne vaudra une lecture attentive des chapitres qui vous intéressent. Il s’agit d’une recommandation de base. Ici c’est même un préalable, car si EAD par exemple est souple et facile à comprendre et cerner, TEI l’est beaucoup moins. Pour commencer à travailler avec TEI, la première consigne est de commencer à lire la documentation.
 
 ---
 

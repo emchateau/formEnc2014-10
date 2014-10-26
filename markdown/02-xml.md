@@ -180,6 +180,6 @@ name: biblio
 template: inverse
 class: center middle
 
-# La [suite](04-teiMacrostructure.html)
+# La [suite](03-teiGeneralites.html)
 
 .left[.footnote[[revenir au début](#index)]]

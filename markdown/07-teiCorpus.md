@@ -57,6 +57,76 @@ Les manuscrits que nous avions à traiter présentaient généralement une struc
 
 ---
 
+# teiCorpus
+
+```xml
+<teiCorpus>
+  <teiCorpus>
+    <TEI>
+      <!-- témoin manuscrit -->
+    </TEI>
+    <TEI>
+      <!-- témoin manuscrit -->
+    </TEI>
+    <TEI>
+      <!-- témoin manuscrit -->
+    </TEI>
+  </teiCorpus>
+  <teiCorpus>
+    <!-- ... -->
+  </teiCorpus>
+</teiCorpus>
+
+```
+
+---
+
+# Utilisation de XInclude
+
+```xml
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+      <!-- ... -->
+    </teiHeader>
+
+    <!-- Inclusion du fichier TEI du manuscrit des Ordres (O) -->
+    <xi:include href="o/desgodetsO.tei.xml" parse="xml">
+        <xi:fallback>Fichier TEI du manuscrit des Ordres de Desgodets non trouvé</xi:fallback>
+    </xi:include>
+
+    <!-- Inclusion du fichier TEI du manuscrit des Commodités (C) -->
+    <xi:include href="c/desgodetsC.tei.xml" parse="xml">
+        <xi:fallback>Fichier TEI du manuscrit des Commodités de Desgodets non trouvé</xi:fallback>
+    </xi:include>
+  </teiCorpus>
+```
+
+- [XML Inclusions (XInclude) Version 1.0 (Second Edition), W3C Recommendation 15 November 2006](http://www.w3.org/TR/xinclude/).
+
+---
+
+# Utilisation de XInclude
+
+équivaut à :
+
+```xml
+<teiCorpus xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
+    <teiHeader>
+      <!-- ... -->
+    </teiHeader>
+    <!-- Inclusion du fichier TEI du manuscrit des Ordres (O) -->
+    <TEI>
+      <!-- contenu du fichier TEI -->
+    </TEI>
+    <TEI>
+      <!-- contenu du fichier TEI -->
+    </TEI>
+</teiCorpus>
+
+---
+
 template: inverse
 class: center middle
 
