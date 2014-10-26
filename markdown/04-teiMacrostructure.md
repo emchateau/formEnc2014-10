@@ -42,14 +42,60 @@ template: inverse
 ]
 
 .right-column[
-# L'édition critique numérique
+# La macrostructure TEI
 
-## 1. Caractéristiques attendues d'une édition critique
+## 1. [Structure d'un document TEI](#part1)
 
-## 2. La prise en charge numérique de l'édition critique
+## 2. [Le teiHeader](#part2)
 
-## 3. Le potentiel des éditions numériques
+## 3. [Macrostructure du texte](#part3)
 ]
+
+
+---
+
+name: part1
+template: inverse
+class: center middle
+
+# .red[1.] La macrostructure TEI
+
+---
+
+# Composition d'un fichier TEI
+
+```xml
+<TEI xmlns='http://www.tei-c.org/​ns/​1.0'>
+  <teiHeader>
+    <!-- métadonnées décrivant le texte --> </teiHeader>
+  <text>
+    <!-- représentation du texte lui-même -->
+  </text>
+</TEI>
+```
+
+???
+
+Tous les documents TEI reçoivent une organisation similaire.
+L'élément racine (celui qui contient tous les autres) est un élément `TEI`, celui-ci est placé dans l'espace de nom tei avec l'attribut `xmlns`, ce qui signifie que tous les sous-éléments sont placés dans cet espace de nom par défaut.
+
+Un document TEI se compose d'au moins deux parties :
+- `teiHeader` qui accueille les métadonnées décrivant le texte
+- `text` qui reçoit la représentation du texte lui-même.
+
+name: part2
+template: inverse
+class: center middle
+
+# .red[2.] Le teiHeader
+
+---
+
+name: part3
+template: inverse
+class: center middle
+
+# .red[3.] Macrostructure du texte
 
 ---
 

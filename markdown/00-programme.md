@@ -98,9 +98,9 @@ name: programmeJour2
 
 # mardi 28 novembre 2014 .inverse[(jour2)]
 
-- 09h30 – 10h00 : [05-L'en-tête TEI](05-teiHeader.html)
+- 09h30 – 10h00 : [05-La description des manuscrits](05-teiHeader.html)
 
-- 10h00 – 11h00 : [ex03-TP entête TEI](ex03-teiHeader.html)
+- 10h00 – 11h00 : [ex03-TP description des manuscrits](ex03-teiHeader.html)
 
 - 11H00 – 11H15 : Pause
 

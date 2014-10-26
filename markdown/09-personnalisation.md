@@ -135,6 +135,22 @@ class: center middle
 - des classes d'éléments ou d'attributs
 - une manière de faire référence à ces objets
 
+???
+
+L’ensemble de la TEI est rédigée dans un format source intitulé ODD (One Document Does it All) qui inclue les fragments de schéma, la documentation en prose et la documentation de référence des Guidelines dans un seul document. Une spécification ODD est un document XML-TEI qui utilise le module tagdocs.
+
+Lequel module fournit une série d’éléments employés pour spécifier un nouveau schéma, ou des modifications apportées à la structure des éléments TEI afin de générer automatiquement un schéma dans le format choisi et sa documentation correspondante au moyen d’un processeur destiné à cet effet.
+
+- cf. Sperberg-McQueen, C. Michael, Burnard, Lou, et Bauman, Syd, « TEI P5 : Guidelines for Electronic Text Encoding and Interchange », TEI P5 : Guidelines for Electronic Text Encoding and Interchange, [Chapitre 22](http://www.tei-c.org/Guidelines/P5/).
+
+---
+
+# Le Langage ODD
+
+???
+
+Un document ODD se présente comme un document XML-TEI courant comportant une en-tête TEI, un élément <front>, <body> et <back>, le schéma est défini au moyen d’un élément <schemaSpec> qui va contenir les déclarations. À partir d’un tel document, un processeur ODD sera en mesure de combiner les déclarations des modules désignés et de produire un schéma du type requis et éventuellement une documentation de tous les éléments choisis.
+
 ---
 
 ## Organisation de la TEI (rappel)
@@ -177,14 +193,173 @@ Le système de classes de la TEI distingue donc :
 
 -	[des classes d'attribut](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html)
 
+L’intérêt de ces classes est qu’elles permettent de factoriser les déclarations de modèle de contenu. Les classes permettent de rassembler un certain nombre d’éléments afin de pouvoir y faire référence de manière groupée.
+
 Même s'il s'agit d'un système de classification formelle des éléments et des attributs de la TEI, ce système de classes de modèle ou d'attribut n'est pas directement assimilable aux notions de classes ou d'attributs telles qu'elles sont habituellement employées en UML ou pour les ontologies.
 
 Cependant, elles servent à décrire des relations entre les éléments et les attributs. Et en utilisant ces classes de modèle et d'attribut, la spécification d'un schéma permet de contraindre la cardinalité ou les listes de valeurs de ces éléments ou attributs en XML. Mais la sémantique de ces relations n'est pas  définie formellement, elle est seulement donnée littéralement dans la documentation de la TEI.
 
+## Les macros
+
+Il est enfin possible de déclarer sous forme de macros, les déclarations fréquentes pour réemployer à plusieurs endroits le même bloc de contenu par exemple pour définir le type de données des attributs ou des éléments TEI.
+
+---
+
+# Sélection des modules
+
+```xml
+<schemaSpec ident="desgodetsSchemaTEI"
+  docLang="fr" prefix="tei_" xml:lang="en">
+  <moduleRef key="tei"/>
+  <moduleRef key="header"/>
+  <moduleRef key="core"/>
+  <moduleRef key="textstructure"/>
+  <moduleRef key="msdescription"/>
+    <!-- description des manuscrits -->
+  <moduleRef key="transcr"/>
+    <!-- transcription des sources primaires -->
+  <moduleRef key="figures"/>
+    <!-- tableaux et figures -->
+  <moduleRef key="namesdates"/>
+    <!-- noms, dates, personnes et lieux -->
+</schemaSpec>
+```
+
+???
+
+Le projet éditorial consistant à publier une collection de matériaux manuscrits sous la forme d’un corpus, chaque source manuscrite devant faire l’objet d’une description appropriée, et pouvant comprendre des images, nous avons éprouvé le besoin d’ajouter plusieurs modules aux quatre modules habituels : tei, header, core, et textstructure.
+
+Le module msdescription a permis de prendre en charge une grande partie de la description des manuscrits. transcr est un module spécialisé dans la transcription des sources primaires manuscrites. Le module figures apportait quant à lui les éléments nécessaires pour localiser et documenter les planches dans l’édition.
+
+S’agissant d’une édition à caractère historique, nous avons jugé que le module namesdates nous serait utile.
+
+Dans le fichier ODD, à l’intérieur de l’élément <schemaSpec>, une série d’éléments <moduleRef> servent à désigner les modules utilisés au moyen d’un attribut `@key`
+
+---
+
+# Personnalisation détaillée
+
+```xml
+<moduleRef
+  key="textstructure"
+  except="div1 div2 div3 div4 div5 div6 div7 group"/>
+```
+
+```xml
+<attDef ident="org" mode="delete"/>
+```
+
+
+???
+
+L’architecture de la TEI permet une personnalisation plus détaillée au sein de chaque module. Il est possible de supprimer des éléments, de restreindre la liste des attributs, et même d’ajouter des éléments. La spécification que nous avons élaborée à l’aide de Roma a par exemple supprimé un certain nombre d’éléments jugés inutiles à l’intérieur de certains modules de la manière suivante :
+
+```xml
+<moduleRef
+  key="textstructure"
+  except="div1 div2 div3 div4 div5 div6 div7 group"/>
+```
+
+Dans la plupart des cas, la suppression d’un élément est une modification « propre » de la TEI, toutefois certains éléments disposent d’enfants obligatoires. Par exemple, <fileDesc> doit contenir à la fois <titleStmt> et <sourceDesc>. La suppression d’un élément enfant obligatoire dans le modèle de contenu rompt le modèle abstrait de la TEI.
+
+Il est également possible de désigner des éléments ou des classes individuellement avec les éléments <elementSpec>, <classSpec>, ou <macroSpec>. Le type de modification apporté est déterminé par la valeur d’un attribut `@mode` (add, replace, delete, et change) :
+
+```xml
+<attDef ident="org" mode="delete"/>
+```
+On peut également modifier la liste des attributs possibles pour un élément. Celles-ci peuvent être données explicitement au moyen d’un élément <attList> dans la spécification de l’élément correspondant ou bien être héritées d’une classe d’attribut. Lorsque l’on ajoute un attribut, on doit d’abord vérifier si celui-ci n’est pas déjà défini dans une classe d’attribut. Si tel est le cas, il suffit de rendre l’élément concerné membre de cette classe. Sinon ont doit définir un attribut au moyen de <attDef> pour l’ajouter à la liste <attList> de l’élément concerné.
+
+---
+
+# Contraindre la valeur d'un attribut
+
+```xml
+<attDef ident="agent" mode="change" usage="req">
+ <valList type="closed" mode="replace">
+  <valItem ident="fire"/>
+  <valItem ident="moisture"/>
+  <valItem ident="rubbing"/>
+  <valItem ident="smoke"/>
+  <valItem ident="tear"/>
+  <valItem ident="water"/>
+  <valItem ident="unknown"/>
+ </valList>
+</attDef>
+```
+
+???
+
+Il est souvent utile de contraindre les valeurs possibles d’un attribut au moyen d’un typage des données. Cela peut être réalisé facilement au moyen de l’élément <valList> qui est un élément enfant de <attDef>. De la même manière on peut étendre ou remplacer la liste existante d’attributs proposée par la TEI. Selon les modifications réalisées de cette manière, celles-ci sont plus ou moins propres.
+
+Il peut aussi être intéressant de préciser l’information sémantique de certains éléments qui peut être trop générale par rapport à son utilisation dans le projet (<desc> dans <elementSpec>). Les exemples dans <exemplum> peuvent également être enrichis par ceux du projet. Nous n’avons pas eu le temps de réaliser ces personnalisations, mais il nous semble qu’elles pourraient se révéler utiles avant la publication du schéma.
+
+---
+
+# Modification des classes
+
+```xml
+<classSpec
+  ident="att.internetMedia"
+  type="atts"
+  mode="change"
+  module="tei">
+ <attList>
+  <attDef ident="mimeType" mode="change">
+   <valList type="closed" mode="replace">
+    <valItem ident="image/jpg"/>
+    <valItem ident="application/pdf"/>
+    <valItem ident="application/tei+xml"/>
+    <valItem ident="application/xml"/>
+   </valList>
+  </attDef>
+ </attList>
+</classSpec>
+```
+
+???
+
+Le mode modification peut également s’appliquer à des classes. Dans cet exemple, nous avons remplacé à l’aide de Roma un ensemble de valeurs d’attributs pour tout attribut membre de la classe att.internetMedia.
+
+```xml
+<classSpec
+  ident="att.internetMedia"
+  type="atts"
+  mode="change"
+  module="tei">
+ <attList>
+  <attDef ident="mimeType" mode="change">
+   <valList type="closed" mode="replace">
+    <valItem ident="image/jpg"/>
+    <valItem ident="application/pdf"/>
+    <valItem ident="application/tei+xml"/>
+    <valItem ident="application/xml"/>
+   </valList>
+  </attDef>
+ </attList>
+</classSpec>
+```
+
+---
+
+# Les différentes manières de personnaliser la TEI
+
+1. rédiger une spécification de haut niveau
+2. utiliser les sous-modules de la TEI et spécifier dans ces sous-ensembles les fondctionnalités à activer
+3. utiliser les modules RelaxNG et rédiger un schéma d'enveloppe
+
+???
+
+Il est possible de personnaliser la TEI en supprimant des modules un certain nombre d’éléments qui ne seraient pas nécessaires pour le traitement de ses documents ou en modifiant ces classes. Ce faisant, on peut restreindre la manière de traiter certains phénomènes, ou encore, limiter les attributs disponibles sur un élément, et définir pour ces attributs des listes de valeurs ouvertes ou fermées. Au besoin, on peut également modifier le nom des éléments par exemple pour l’internationalisation ou ajouter des éléments, ce qui n’a pas été retenu dans le cadre de notre projet.
+
+Les Guidelines décrivent trois manières de personnaliser (customizing) la TEI :
+-	1° Rédiger une spécification de haut niveau pour une représentation en TEI et générer un schéma ad hoc ;
+-	2° Utiliser les modules de la TEI et spécifier dans ces sous-ensembles quelles fonctionnalités l’on souhaite activer ;
+-	3° Utiliser les modules Relax NG, et rédiger un schéma d’enveloppe.
+
 ---
 
 name: application
-template: inverse
+
 class: center middle
 
 # .red[3.] Génération d'un Schéma XML ou RelaxNG
