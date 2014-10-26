@@ -98,6 +98,9 @@ Dès l’origine la TEI a été conçue pour être employée comme un ensemble d
 
 ## Une définition qui s'opère au moyen d'aller-retour avec les sources textuelles
 
+
+Afin de produire une modélisation de ce type, et éventuellement le manuel d’encodage qui l’accompagne, il est nécessaire de bien comprendre sa source. Aussi ne faut-il pas envisager l’encodage comme une fin en soi, mais plutôt comme un moyen de travailler et d’étudier le matériau textuel. La définition du modèle s’opère au moyen d’aller-retour continus avec les sources textuelles que l’on souhaite traiter.
+
 La définition du schéma s’opère au moyen d’aller-retour continus avec les sources textuelles que l’on souhaite traiter.
 
 - On effectue généralement d’abord une **première modélisation à partir d’un échantillon jugé représentatif** du corpus.
@@ -105,6 +108,14 @@ La définition du schéma s’opère au moyen d’aller-retour continus avec les
 - Enfin, lors du passage à l’échelle, il est parfois nécessaire de **corriger quelques choix s’avérant inappropriés ou bien encore de renforcer le contrôle** par l’intermédiaire du schéma.
 
 - Le processus d’élaboration du modèle est donc **un processus incrémentiel**, et le schéma n’est pas d’emblée figé dans le marbre.
+
+---
+
+name: odd
+template: inverse
+class: center middle
+
+# .red[2.] Le Langage ODD
 
 ---
 
@@ -123,6 +134,52 @@ La définition du schéma s’opère au moyen d’aller-retour continus avec les
 - des macros ou patrons
 - des classes d'éléments ou d'attributs
 - une manière de faire référence à ces objets
+
+---
+
+## Organisation de la TEI (rappel)
+
+- 22 Modules
+
+- [Classes de modèle](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-MODEL.html)
+
+- [Classes d'attribut](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html)
+
+???
+
+L’architecture de la TEI permet de construire un schéma en combinant comme de besoin des déclarations d’éléments et d’attributs.
+
+Chaque élément est documenté par un élément de spécification adéquat et dispose d’un identifiant unique dans le système.
+
+Pour plus de facilité, ces spécifications sont groupées dans des modules distincts qui peuvent être combinés entre eux. Chaque module détermine un certain nombre d’éléments spécifiques qui peuvent également renseigner des classes particulières. Toutes les classes sont disponibles globalement, indépendamment des modules dans lesquelles elles sont déclarées.
+
+Lorsque c’est possible, les modèles de contenus sont définis en termes de classes (classes), les modules peuvent également déclarer certains motifs particuliers (patterns).
+
+## Les modules de la TEI
+
+Dans l’infrastructure de la TEI, les éléments de la TEI sont organisés au sein de différents modules qui les regroupent par type d’utilisation.
+
+
+## Système de classes
+
+Outre ces vingt-deux modules, les cinq cent quarante-trois éléments de la TEI et leurs attributs sont également organisés en classes de modèle (model class) et classes d’attribut (attribute class) afin de faciliter leur modification.
+
+Les éléments d’une même classe peuvent apparaître au même endroit dans un modèle de contenu, il s’agit alors d’une classe de modèle, ou partager un ensemble d’attributs, il s’agit alors d’une classe d’attributs.
+
+Dans les deux cas, on dit qu’un élément hérite des propriétés des classes auxquelles il appartient. Les classes (et donc les éléments qui sont membres de ces classes) peuvent également hériter des propriétés d’autres classes.
+
+-	[liste les classes de modèles](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-MODEL.html)
+
+-	[liste les classes d’attribut](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html)
+
+
+---
+
+name: application
+template: inverse
+class: center middle
+
+# .red[3.] Génération d'un Schéma XML ou RelaxNG
 
 ---
 

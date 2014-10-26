@@ -539,7 +539,82 @@ Si la conception de la TEI découle en grande partie des technologies XML, et qu
 
 # Un cadre de travail flexible et modulaire
 
+### [22 modules](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STMA)
+
+- Classement des 555 éléments de la TEI par domaines d'application
+- Chaque module fait l'objet d'un chapitre de la documentation
+
+### [Classes de modèle](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-MODEL.html)
+
+### [Classes d'attribut](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html)
+
+???
+
+Dès l'origine, la TEI a été conçue pour être employée comme un ensemble de briques permettant de construire des schémas spécifiques pour un projet donné.
+
+L'infrastructure de la Proposition numéro 5 de la TEI (P5) consiste en :
+
+- vingt-deux modules parmi lesquels sont répartis les nombreux éléments de la TEI qui font l'objet d'une importante documentation textuelle
+
+- ils sont formellement classés dans des classes de modèle et d'attributs auxquels on peut faire appel pour spécifier un schéma.
+
+[cf. Personnalisation de la TEI ](09.personnalisation.html)
+
 ---
+
+name: modules
+# Les 22 [modules](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STMA) de la TEI
+
+![module](images/modulesTEI.png)
+
+---
+
+name: modules
+# Les 22 [modules](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html#STMA) de la TEI
+
+### Regroupés par domaine d'application, à chaque module correspond un chapitre des [Guidelines](http://www.tei-c.org/Guidelines/)
+
+### Trois modules habituellement requis :
+
+- [core](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/CO.html) éléments disponibles dans tous les documents TEI
+
+- [header](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/HD.html) en-tête TEI
+
+- [textstructure](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/DS.html) structure de text par défault
+
+& [tei](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ST.html) infrastructure TEI
+
+### ex d'autres modules spécialisés
+
+[namesdates](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html) pour les noms et dates, [transcr](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html) pour la critique textuelle, [msdescription](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html) pour la description de manuscrits, [figure](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html) facsimili, ...
+
+???
+
+Les modules constituent avant tout un moyen commode de grouper par domaine d'application les nombreux éléments de la TEI (ils sont actuellement au nombre de 555).
+
+Chaque module fait l'objet d'une description littérale dans un chapitre des Guidelines.
+
+Trois de ces modules sont habituellement requis lors de la production d'un schéma (`core`, `header`, et `textstructure`, on utilise également `tei` pour RelaxNG).
+
+
+Outre ces trois modules, on fait fréquemment appel aux modules suivants `figures`, `namesdates`, `linking`, `transcr`.
+
+- Le module [namesdates](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/ND.html) est particulièrement adapté pour la description des entités historiques de type personnes et lieux.
+
+- Le module [figure](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/FT.html) est utilisé conjointement avec `transcr` pour traiter la description des facsimili.
+
+- [transcr](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/PH.html) est destiné à la transcription de manuscrit
+
+- [msdescription](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html) sert à la description de manuscrits.
+
+Il est également possible d'utiliser le module `dictionaries` pour le traitement d'un glossaire.
+
+---
+
+name: conclusion
+template: inverse
+class: center middle
+
 
 # Conclusion
 
