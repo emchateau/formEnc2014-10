@@ -72,25 +72,25 @@ name: programmeJour1
 
 # lundi 27 novembre 2014 .inverse[(jour1)]
 
-- 09h30 – 10h00 : [Présentations et introduction](00-programme.html)
+- 09h30 – 10h00 : [00-Présentations et introduction](00-programme.html)
 
-- 10h00 – 10h30 : [Un premier panorama de l'édition numérique avec TEI](01-editionNumerique.html)
+- 10h00 – 10h30 : [01-Un premier panorama de l'édition numérique avec TEI](01-editionNumerique.html)
 
-- 10h30 – 11h00 : [Les technologies XML](02-xml.html)
+- 10h30 – 11h00 : [02-Les technologies XML](02-xml.html)
 
 - 11H00 – 11H15 : Pause
 
-- 11H15 – 12H30 : [TP XML et prise en main d'Oxygen](ex01-xml.html)
+- 11H15 – 12H30 : [ex01-XML et prise en main d'Oxygen](ex01-xml.html)
 
 - 12H30 – 14H00 : Déjeuner
 
-- 14H00 – 15H00 : [Présentation de la Text Encoding Initiative](03-teiGeneralites.html)
+- 14H00 – 15H00 : [03-La Texte Encoding Initiative](03-teiGeneralites.html)
 
-- 15H00 – 15H30 : [Quelques éléments de la TEI](04-teiMacrostructure.html)
+- 15H00 – 15H30 : [04-Macrostructure TEI](04-teiMacrostructure.html)
 
 - 15H30 – 15H45 : Pause
 
-- 15H45 – 17H30 : [Exercice d'encodage](ex02-teiMacrostructure.html)
+- 15H45 – 17H30 : [ex02-TP d'encodage](ex02-teiMacrostructure.html)
 
 ---
 
@@ -98,27 +98,27 @@ name: programmeJour2
 
 # mardi 28 novembre 2014 .inverse[(jour2)]
 
-- 09h30 – 10h00 : [L'en-tête TEI](05-teiHeader.html)
+- 09h30 – 10h00 : [05-L'en-tête TEI](05-teiHeader.html)
 
-- 10h00 – 11h00 : [TP entête TEI](ex03-teiHeader.html)
+- 10h00 – 11h00 : [ex03-TP entête TEI](ex03-teiHeader.html)
 
 - 11H00 – 11H15 : Pause
 
-- 11h15 – 11h45 : [Autres éléments pour l'édition critique](06-editionCritique.html)
+- 11h15 – 11h45 : [06-Éléments pour l'édition critique](06-editionCritique.html)
 
-- 11h45 – 12h30 : [TP mains et témoins](ex04-witness.html)
+- 11h45 – 12h30 : [ex04-TP mains et témoins](ex04-witness.html)
 
 - 12H30 – 13H30 : Déjeuner
 
-- 13H30 – 14H00 : [Liens et Structures plus complexes](07-teiCorpus.html)
+- 13H30 – 14H00 : [07-Liens et Structures complexes](07-teiCorpus.html)
 
-- 14H00 – 14H30 : [TP Liens et Structures plus complexes](ex05-corpus.html)
+- 14H00 – 14H30 : [ex05-TP Liens et Structures plus complexes](ex05-corpus.html)
 
-- 15H00 – 15H30 : [Entités nommées et structures complexes](08-namedEntities.html)
+- 15H00 – 15H30 : [08-Entités nommées](08-namedEntities.html)
 
 - 15h30 – 15H45 : Pause
 
-- 15h45 – 17H30 : [TP entités nommées](ex06-namedEntities.html)
+- 15h45 – 17H30 : [ex06-TP entités nommées](ex06-namedEntities.html)
 
 ---
 
@@ -126,28 +126,29 @@ name: programmeJour3
 
 # mercredi 29 novembre 2014 .inverse[(jour3)]
 
-- 09h30 – 10h00 : [Personnalisation de la TEI](09-personnalisation.html)
+- 09h30 – 10h00 : [09-Personnalisation de la TEI](09-personnalisation.html)
 
-- 10h00 – 11h00 : [Exercice Odd](ex07-odd.html)
+- 10h00 – 11h00 : [ex08-TP Odd](ex07-odd.html)
 
 - 11H00 – 11H15 : Pause
 
-- 11h15 – 11h45 : [Choix d'un schéma, personnalisation](10-odd.html)
+- 11h15 – 11h45 : [10-Choix d'un schéma, personnalisation](10-odd.html)
 
-- 11h45 – 12h30 : [Exercice personnalisation](ex08-odd.html)
+- 11h45 – 12h30 : [ex08-TP personnalisation](ex08-odd.html)
 
 - 12H30 – 13H30 : Déjeuner
 
-- 13H30 – 14H00 : [Exploiter ses documents](11-exploiter.html)
+- 13H30 – 14H00 : [11-Exploiter ses documents TEI](11-xpath00.html)
 
-- 14H00 – 14H30 : [Présentation des langages XML](12-introXpathXslt.html)
+- 14H00 – 14H30 : [12-Le modèle de données XDM](12-xpath01.html)
 
-- 15H00 – 15H30 : [Explorer ses documents avec XPath](13-xpath01.html)
+- 15H00 – 15H30 : [13-Expression XPath](13-xpath02.html)
 
 - 15h30 – 15H45 : Pause
 
-- 15h45 – 17H30 : [TP entités nommées](.html)
+- 15h45 – 16H30 : [ex09-Sélection dans un arbre](ex09-xpath03.html)
 
+- 16h30 – 17H30 : [ex10-Explorer ses documents TEI avec XPath](ex10-xpath04.html)
 
 ---
 
@@ -156,11 +157,25 @@ name: programmeJour4
 # jeudi 30 novembre 2014 .inverse[(jour4)]
 
 
-- 15H00 – 15H30 : [Quelques éléments de la TEI](03-tei.html)
+- 09h30 – 11h00 : [14-Introduction XSLT](14-xslt00.html)
 
-- 15H30 – 15H45 : Pause
+- 10h00 – 11h00 : [ex11-Premières transformations avec XLST](ex11-xslt02.html)
 
-- 15H45 – 17H30 : [Exercice d'encodage](ex02-tei.html)
+- 11H00 – 11H15 : Pause
+
+- 11h15 – 11h45 : [15-Règles modèles XSLT](15-xslt0.html)
+
+- 11h45 – 12h30 : [16-Introduction HTML](16-html00.html)
+
+- 12H30 – 13H30 : Déjeuner
+
+- 13H30 – 15H00 : [ex12-TP transformation d'un document XML-TEI en HTML](ex12-xpath03.html)
+
+- 15h00 – 15H15 : Pause
+
+- 15h30 – 16H00 : Conclusion et questions diverses
+
+- 16h30 – 17H00 : Évaluation
 
 ---
 

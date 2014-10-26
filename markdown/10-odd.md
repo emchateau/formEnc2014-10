@@ -74,6 +74,9 @@ C'est précisément l'objet de ODD qui propose un vocabulaire spécialisé pour 
 
 ---
 
-.left[.footnote[[revenir au début](#index)]]
+template: inverse
+class: center middle
 
----
+#
+
+.left[.footnote[[revenir au début](#index)]]

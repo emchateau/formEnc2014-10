@@ -155,6 +155,7 @@ Pour plus de facilité, ces spécifications sont groupées dans des modules dist
 
 Lorsque c’est possible, les modèles de contenus sont définis en termes de classes (classes), les modules peuvent également déclarer certains motifs particuliers (patterns).
 
+
 ## Les modules de la TEI
 
 Dans l’infrastructure de la TEI, les éléments de la TEI sont organisés au sein de différents modules qui les regroupent par type d’utilisation.
@@ -162,16 +163,23 @@ Dans l’infrastructure de la TEI, les éléments de la TEI sont organisés au s
 
 ## Système de classes
 
-Outre ces vingt-deux modules, les cinq cent quarante-trois éléments de la TEI et leurs attributs sont également organisés en classes de modèle (model class) et classes d’attribut (attribute class) afin de faciliter leur modification.
+Outre ces vingt-deux modules, les cinq cinquante-cinq éléments de la TEI et leurs attributs sont également organisés en classes de modèle (model class) et classes d’attribut (attribute class).
+
+Tous éléments de la TEI sont formellement classés dans ces classes pour faciliter la compréhension et la modularité ainsi que leur modification.
+
+Les éléments d'une classe peuvent partager un ensemble d'attributs ou bien apparaître au même endroit dans un modèle de contenu. Dans l'un ou l'autre des cas, on considère qu'un élément ou un attribut hérite des propriétés de la classe dont il est membre.
 
 Les éléments d’une même classe peuvent apparaître au même endroit dans un modèle de contenu, il s’agit alors d’une classe de modèle, ou partager un ensemble d’attributs, il s’agit alors d’une classe d’attributs.
 
-Dans les deux cas, on dit qu’un élément hérite des propriétés des classes auxquelles il appartient. Les classes (et donc les éléments qui sont membres de ces classes) peuvent également hériter des propriétés d’autres classes.
+Le système de classes de la TEI distingue donc :
 
--	[liste les classes de modèles](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-MODEL.html)
+-	[des classes de modèle de contenu](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-MODEL.html)
 
--	[liste les classes d’attribut](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html)
+-	[des classes d'attribut](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/REF-CLASSES-ATTS.html)
 
+Même s'il s'agit d'un système de classification formelle des éléments et des attributs de la TEI, ce système de classes de modèle ou d'attribut n'est pas directement assimilable aux notions de classes ou d'attributs telles qu'elles sont habituellement employées en UML ou pour les ontologies.
+
+Cependant, elles servent à décrire des relations entre les éléments et les attributs. Et en utilisant ces classes de modèle et d'attribut, la spécification d'un schéma permet de contraindre la cardinalité ou les listes de valeurs de ces éléments ou attributs en XML. Mais la sémantique de ces relations n'est pas  définie formellement, elle est seulement donnée littéralement dans la documentation de la TEI.
 
 ---
 
@@ -183,6 +191,9 @@ class: center middle
 
 ---
 
-.left[.footnote[[revenir au début](#index)]]
+template: inverse
+class: center middle
 
----
+#
+
+.left[.footnote[[revenir au début](#index)]]

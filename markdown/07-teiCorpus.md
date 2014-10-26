@@ -47,6 +47,9 @@ template: inverse
 
 ---
 
-.left[.footnote[[revenir au début](#index)]]
+template: inverse
+class: center middle
 
----
+#
+
+.left[.footnote[[revenir au début](#index)]]

@@ -7,6 +7,7 @@ class: inverse
 
 ---
 
+name: index
 class: center middle
 
 # 03-La Text Encoding Initiative comme cadre de travail pour l'édition des textes
@@ -657,6 +658,14 @@ Il ne suffit pas que les textes soient tous encodés en TEI pour qu’ils soient
 
 ---
 
+name: sourcesBiblio
+template: inverse
+class: center middle
+
+# Sources et bibliographie
+
+---
+
 name: biblio
 
 # Orientations bibliographiques
@@ -672,5 +681,10 @@ name: biblio
 - Mylonas, Elli, and Allen Renear. ["The Text Encoding Initiative at 10: Not Just An Interchange Format Anymore – but a New Research Community."](http://link.springer.com/article/10.1023%2FA%3A1001832310939) Computers and the Humanities 33, no. 1-2 (1999): doi:10.1023/A:1001832310939.
 
 ---
+
+template: inverse
+class: center middle
+
+# La [suite](04-teiMacrostructure.html)
 
 .left[.footnote[[revenir au début](#index)]]

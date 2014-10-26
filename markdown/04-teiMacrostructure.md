@@ -7,6 +7,7 @@ class: inverse
 
 ---
 
+name: index
 class: center middle
 
 # 04-Macrostructure
@@ -52,84 +53,10 @@ template: inverse
 
 ---
 
-# Comment rendre compte de la .red[source primaire]
+template: inverse
+class: center middle
 
-## - Objectivité / parti-pris
-
-## - Édition de sources primaires
-
-## - Matérialité de l'édition
-
----
-
-#Critères de scientificité
-
-## fiable
-
-## consistante
-
-## justification des partis pris
-
----
-
-# Un investissement important
-
-## Méthode de travail adaptée (temps long, travail en équipe)
-
-## Interopérabilité
-
-## Pérennité
-
----
-
-# Peut-on .red[(sérieusement)] utiliser un traitement de texte ?
-
-## S'intéresser au contenu plutôt qu'à la forme
-
-## L'expressivité
-
----
-
-# Exemples
-
-elec
-
-hyperdonnat
-
-Les liens
-
-- sandrart.net
-
-- vangoghletters.org
-
----
-
-Ce que l'on peut attendre d'une édition critique numérique
-
-Documentation de l'édition
-
-Contrôle de la production
-
-Perennité et interopérabilité
-
----
-
-# Conclusion (lessons learned)
-
-Privilégier le marquage sémantique plutôt que présentationnel
-
-Ne pas se contraindre du point de vue logiciel
-
-Profiter pleinement des possibilités offertes par le numérique
-
-Disposer d'un cadre de travail qui contrôle la qualité des documents
-
-
-Notes
-
-Liste des figuresIntitulé
-
----
+# Maintenant, passons à [la pratique](ex02-teiMacrostructure.html) !
 
 .left[.footnote[[revenir au début](#index)]]
 

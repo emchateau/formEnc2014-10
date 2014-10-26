@@ -160,3 +160,26 @@ Le document comporte également des *attributs*. Ce sont des **paires nom-valeur
 ---
 
 # Validation
+
+---
+
+name: sourcesBiblio
+template: inverse
+class: center middle
+
+# Sources et bibliographie
+
+---
+
+name: biblio
+
+# Orientations bibliographiques
+
+---
+
+template: inverse
+class: center middle
+
+# La [suite](04-teiMacrostructure.html)
+
+.left[.footnote[[revenir au début](#index)]]
