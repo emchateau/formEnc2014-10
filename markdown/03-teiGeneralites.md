@@ -608,11 +608,13 @@ Outre ces trois modules, on fait fréquemment appel aux modules suivants `figure
 
 - [msdescription](http://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html) sert à la description de manuscrits. Quand fait une édition de texte, besoin de décrire la source que l’on édite, on y trouver les éléments nécessaires.
 
-Il est également possible d'utiliser le module `dictionaries` pour le traitement d'un glossaire.
+- Il est également possible d'utiliser le module `dictionaries` pour le traitement d'un glossaire.
 
-Module drama pour la transcription du texte oral pas la même chose que texte de base. Composante de temps.
+- Module drama pour la transcription du texte oral pas la même chose que texte de base. Composante de temps.
 
-`textCrit` lorsque l'on a besoin d’encoder un apparat critique, quand étudie un texte qui a plusieurs témoins, plusieurs manuscrits qui constitue plusieurs leçons d’un texte transcrit (variantes) critical aparatus
+- `textCrit` lorsque l'on a besoin d’encoder un apparat critique, quand étudie un texte qui a plusieurs témoins, plusieurs manuscrits qui constitue plusieurs leçons d’un texte transcrit (variantes) critical aparatus
+
+- `linking` qui concerne le modèle de lien
 
 ---
 

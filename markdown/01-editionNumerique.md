@@ -63,6 +63,9 @@ template: inverse
 
 ## - Matérialité de l'édition
 
+???
+
+
 ---
 
 #Critères de scientificité
