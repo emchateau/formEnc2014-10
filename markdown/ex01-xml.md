@@ -100,7 +100,7 @@ layout: false
 
 En vous appuyant sur les propriétés d'un document XML, créez un document destiné à stocker les informations d'un carnet d'adresse des participants à la formation.
 
-- comment tirer partie de la hiérarchie ?
+- comment tirer parti de la hiérarchie ?
 - comment choisir le nom des éléments ?
 - quelle utilisation possible des attributs ?
 - utiliser des commentaires
