@@ -198,6 +198,6 @@ Pour notre proposition transcr, texcrit, namesdates, analysis, certaintly, et ms
 template: inverse
 class: center middle
 
-#
+# à [demain](00-programme.html#programmeJour2)
 
 .left[.footnote[[revenir au début](#index)]]

@@ -98,15 +98,13 @@ template: inverse
 
 # Exemples
 
-elec
+### [elec](http://elec.enc.sorbonne.fr)
 
-hyperdonnat
+### [hyperdonnat](http://elec.enc.sorbonne.fr)
 
-Les liens
+### [vangoghletters.org](http://vangoghletters.org/vg/)
 
-- sandrart.net
-
-- vangoghletters.org
+### [sandrart.net](http://www.sandrart.net/de/)
 
 ---
 
@@ -133,7 +131,7 @@ La supériorité du balisage descriptif sur les autres types de balisage du text
 
 ---
 
-# La production d'un balisage descriptif
+# La production d'un .red[balisage descriptif]
 
 Identifier explicitement la structure sémantique sous-jacente d'un document, indépendamment de tout traitement déterminé à l'avance.
 
@@ -155,7 +153,7 @@ Ce faisant l’auteur d’un balisage fournit une **information sémantique** et
 
 ---
 
-# Procédure mise en œuvre lors du balisage
+# Procédure mise en œuvre lors du .red[balisage]
 
 ###  Reconnaissance des éléments
 
@@ -177,7 +175,7 @@ cf. Coombs, James, et al., op. cit.
 
 ---
 
-# OHCO, Ordered Hierarchical Content Objects
+# .red[OHCO], Ordered Hierarchical Content Objects
 
 L'idée d'un balisage descriptif suggère une représentation du texte qui correspond à un modèle d'**éléments contenus hiérarchiquement imbriqués** (OHCO, _Ordered Hierarchical Content Objects, en anglais_).
 
@@ -220,7 +218,9 @@ Autrement dit, le balisage descriptif offre un certain nombre d’avantages pour
 
 ---
 
-# Conclusion (lessons learned)
+template: inverse
+
+# Conclusions
 
 Privilégier le marquage sémantique plutôt que présentationnel
 
@@ -233,12 +233,6 @@ Disposer d'un cadre de travail qui contrôle la qualité des documents
 ???
 
 Même si la mise en place d’un balisage descriptif du texte, implique le déploiement d’une infrastructure technique sans-doute moins confortable pour travailler que l’utilisation de logiciels de traitement de texte, il faut relever qu’il permet de se concentrer sur le contenu du texte plutôt que sur la présentation physique finale du document. Bien entendu, concernant l’édition de manuscrits historiques, ou de sources primaires, il pourra être nécessaire de traiter la matérialité physique du document. Néanmoins c’est avant tout l’édition du texte qui est ici privilégiée. Dans une telle démarche, il convient en premier lieu de rendre la structure du texte explicite, c’est-à-dire de clarifier à la fois les relations hiérarchiques et séquentielles. Et la présence du balisage détermine la possibilité de traiter les éléments pour une transformation.
-
----
-
-Notes
-
-Liste des figuresIntitulé
 
 ---
 
