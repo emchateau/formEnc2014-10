@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="themes/remark-dark-em.css" rel="stylesheet" media="all" type="text/css"/>
+  </head>
+  <body>
+    <textarea id="source">
+title: 04-Macrostructure
+description: emchateau, ENC 27-30 octobre 2014
+theme: theme/remark-dark.css
+name: inverse
+layout: true
+class: inverse
+
+---
+
+name: index
+class: center middle
+
+# 04-Macrostructure
+Formation TEI | ENC 27-30 octobre 2014
+
+.footnote[[Répertoire GitHub](https://github.com/emchateau/formEnc2014-10) | [Programme](00-programme.html)]
+
+---
+
+name: sommaire
+template: inverse
+
+.left-column[
+##  .red[Sommaire]
+]
+
+.right-column[
+# La macrostructure TEI
+
+## 1. [Structure d'un document TEI](#part1)
+
+## 2. [Le teiHeader](#part2)
+
+## 3. [Macrostructure du texte](#part3)
+]
+
+
+---
+
+name: part1
+template: inverse
+class: center middle
+
+# .red[1.] Structure d'un document TEI
+
+---
+
+layout: false
+
+# Composition d'un fichier TEI
+
+```xml
+<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
+  <teiHeader>
+    <!-- métadonnées décrivant le texte --> </teiHeader>
+  <text>
+    <!-- représentation du texte lui-même -->
+  </text>
+</TEI>
+```
+
+- l'élément racine est `TEI`
+
+- tous les éléments sont placés dans l'espace de nom de la TEI
+
+- le document se compose d'au moins deux parties :
+
+ + `teiHeader`
+
+ + `text`
+
+???
+
+Tous les documents TEI reçoivent une organisation similaire.
+
+L'élément racine (celui qui contient tous les autres) est un élément `TEI`, celui-ci est placé dans l'espace de nom tei avec l'attribut `xmlns`, ce qui signifie que tous les sous-éléments sont placés dans cet espace de nom par défaut.
+
+Un document TEI se compose d'au moins deux parties :
+
+- `teiHeader` qui accueille les métadonnées décrivant le texte
+
+- `text` qui reçoit la représentation du texte lui-même.
+
+---
+
+# Macrostructures de texte composite
+
+```xml
+<text>
+  <front><!-- ... --></front>
+  <group>
+    <text><!-- ... --></text>
+    <text><!-- ... --></text>
+    <text><!-- ... --></text>
+  </group>
+  <back><!-- ... --></back>
+</text>
+```
+
+## teiCorpus
+
+Dans le cas de corpus de textes hétérogènes, on utilisera des éléments `teiCorpus` comme élément racine comportant des éléments `TEI`
+
+```xml
+<teiCorpus
+  <TEI><!-- ... --></TEI>
+  <TEI><!-- ... --></TEI>
+</text>
+```
+
+---
+
+name: part2
+template: inverse
+class: center middle
+
+# .red[2.] Le teiHeader
+
+---
+
+# teiHeader minimal
+
+```xml
+<TEI xmlns="http://www.tei-c.org/​ns/​1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The life and opinions of Tristram Shandy,
+          Gentleman: TEI edition</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Web Head Press</publisher>
+        <date>2013</date>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Transcribed from the first edition, 1708</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+```
+
+???
+
+Dans un élément TEI on trouve obligatoirement un élément teiHeader.
+On y trouvera notamment un élément sourceDesc obligatoire qui décrit le texte que l’on édite. Cela peut être aussi un fichier nativement numérique. Nombreux autres éléments.
+
+---
+
+## teiHeader, mentions de responsabilité
+
+```xml
+<teiHeader>
+  <fileDesc>
+   <titleStmt>
+    <title xml:lang="fre" type="main">Sauval 1724</title>
+    <principal>
+      <persName ref="#MCL">
+        <forename>Marianne</forename>
+        <surname>Cojannot-Le Blanc</surname>
+      </persName>
+    </principal>
+    <funder>
+      <orgName>Labex Les Passés dans le Présent</orgName>
+      <date from="2013" to="2018">2013-2018</date>
+    </funder>
+    <respStmt>
+      <resp key="prg">modélisation XML-TEI</resp>
+      <persName ref="#EC">
+        <forename>Emmanuel</forename>
+        <surname>Château</surname>
+      </persName>
+    </respStmt><!-- ... -->
+   </titleStmt>
+   <editionStmt>
+     <edition n="1">première édition électronique, <date from="2013" to="2018">2013-2018</date></edition>
+   </editionStmt>
+  <!-- ... -->
+  </fileDesc>
+</teiHeader>
+```
+
+---
+
+# mentions de publications
+
+```xml
+<teiHeader>
+  <!-- ... -->
+    <publicationStmt>
+      <authority>
+        <orgName>Histoire des Arts &amp; Représentations</orgName>
+            <orgName type="acronym">HAR</orgName>
+            <orgName type="alt">EA 4414</orgName>
+            <address> <addrLine>Université Paris Ouest-Nanterre La Défense</addrLine><addrLine>http://har.u-paris10.fr</addrLine> <addrLine>harparisouest@gmail.com</addrLine> </address>
+      </authority>
+      <date from="2014" to="2018">2014-2018</date>
+      <idno>ark</idno>
+      <!-- responsable de la publication -->
+      <publisher>
+        <orgName>Histoire des Arts &amp; Représentations</orgName>
+      </publisher>
+      <availability status="restricted" xml:id="gdpLicenceTextSauval1724">
+        <licence target="http://creativecommons.org/licenses/by-nc-sa/4.0/fr/">
+                  <p>Texte de la licence</p></licence>
+      </availability>
+    </publicationStmt>
+    <revisionDesc>
+         <change when="2014-04-15">Remaniement de l'entête et de la structure</change>
+    </revisionDesc>
+</teiHeader>
+```
+
+---
+
+name: part3
+template: inverse
+class: center middle
+
+# .red[3.] Macrostructure du texte
+
+---
+
+# Parties liminaires, postérieures
+
+```xml
+<TEI>
+  <teiHeader>
+    <!-- ... -->
+  </teiHeader>
+  <text>
+    <front>
+      <!-- parties liminaire -->
+      <!-- (préfaces, introductions, etc. dans des éléments div) -->
+    </front>
+    <body>
+      <!-- corps de texte, structuré en sous-éléments div -->
+    </body>
+    <back>
+      <!-- parties postérieures -->
+      <!-- (annexes et appendices dans des éléments div) -->
+    </back>
+  </text>
+</TEI>
+```
+???
+
+Après `teiHeader`, on trouve un élément `text` qui contiendra le cœur de votre texte, avec optionnellement un élément `front` qui contient parties liminaires, `body` qui contient le corps du texte, et `back` qui contient les annexes et les parties supplémentaires du texte.
+
+Cette macrostructure peut-être plus compliquée en fonction de la nature des projets.
+
+---
+
+# Macrostructure du texte
+
+### `body` corps de texte (fils de l'élément `text`)
+
+### `div` division (fils de l'élément `div`, répétable)
+
+### `head` titre d'une division (premier élément fils de `div`, optionnel)
+
+### `p` paragraphe (fils de `div`, répétable)
+
+### `seg` segment (fils de `p`, répétable)
+
+???
+
+---
+
+# Macrostructure du texte
+
+```xml
+<!-- ... -->
+<text>
+  <body>
+    <div type="volume" xml:id="TS01">
+      <div type="chapter" xml:id="TS0101">
+        <head>Chap. I</head>
+        <p>I wish either my father or my mother, or indeed both of them,
+          as they were in duty both equally bound to it, had minded what
+          they were about when they begot me; ...</p>
+        <!-- reste du chapitre 1 -->
+      </div>
+      <div type="chapter" xml:id="TS0102">
+        <head>Chap. II</head>
+        <p> — Then, positively, there is nothing in the question, that I
+          can see, either good or bad. — Then let me tell you, Sir, it
+          was a very unseasonable question at least ...</p>
+        <!-- reste du chapitre 2 -->
+        </div>
+        <!-- reste du volume 1 -->
+      </div>
+      <!-- les autres volumes -->
+  </body>
+</text>
+```
+
+---
+
+# Structures de listes
+
+```xml
+<list>
+  <label><!-- étiquette --></label>
+  <item><!-- item de liste --></item>
+  <label><!-- étiquette --></label>
+  <item><!-- item de liste --></item>
+  <!-- ... -->
+</text>
+```
+
+---
+
+# Structures de tableaux
+
+```xml
+<table>
+  <head><!-- titre --></head>
+  <!-- rangée -->
+  <row>
+    <cell><!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
+  </row>
+  <!-- rangée -->
+  <row>
+    <cell><!-- contenu cellule --></cell>
+    <cell><!-- contenu cellule --></cell>
+  </row>
+</table>
+```
+
+---
+
+# Structures versifiées
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<body xmlns="http://www.tei-c.org/ns/1.0" n="spleenEtIdeal">
+    <div type="longPoem">
+        <head>Les Phares</head>
+        <lg type="stanza">
+            <l n="1">Rubens, fleuve d'oubli, jardin de la paresse,</l>
+            <l n="2">Oreiller de chair fraîche où l'on ne peut aimer,</l>
+            <l n="3">Mais où la vie afflue et s'agite sans cesse,</l>
+            <l n="4">Comme l'air dans le ciel et la mer dans la mer ;</l>
+        </lg>
+        <lg type="stanza">
+            <l n="5">Léonard de Vinci, miroir profond et sombre,</l>
+            <l n="6">Où des anges charmants, avec un doux souris</l>
+            <l n="7">Tout chargé de mystère, apparaissent à l'ombre</l>
+            <l n="8">Des glaciers et des pins qui ferment leur pays ;</l>
+        </lg>
+        <gap reason="sampling" quantity="9" unit="stanza"/>
+    </div>
+    <div type="shortPoem">
+        <head>La Muse malade</head>
+        <gap reason="sampling" quantity="4" unit="stanza"/>
+    </div>
+</body>
+```
+
+---
+
+# Éléments d'usage courant
+
+- `quote` citation
+
+- `foreign` pour les passages en langue étrangère
+
+- `hi` mise en valeur
+
+- `term`, `gloss` termes et glodes
+
+- `date` date
+
+- `supplied` pour les restitutions
+
+- `pb` indication des changements de page
+
+- `name`, `persName`, `placeName` noms, noms de personne, de lieu
+
+- `fw`  permet d’encoder un titre courant (en haut ou en bas de la page), une réclame ou une autre information comparable
+---
+
+## Attributs globaux (toujours disponibles)
+
+- `n` fournit un numéro ou un label
+
+- `rend` donne une indication sur l'apparence
+
+- `xml:id` fournit un identifiant unique
+
+- `xml:lang` indique la langue du contenu textuel de l’élément ([code langue ISO](http://www.iso.org/iso/fr/home/standards/language_codes.htm))
+
+## Attributs fréquemment employés
+
+- `type` pour typer un élément
+
+- `target` lien interne
+
+- `ref` référence
+
+---
+
+# Pages de titre
+
+```xml
+  <titlePage xml:lang="fre">
+    <!-- page de titre transcrite à l'identique -->
+    <docTitle>
+      <titlePart rend="capital">Histoire <lb />et <lb />recherches
+      <lb />des <lb />antiquités <lb />de la ville
+      <lb />de <lb/>Paris.</titlePart>
+      <titlePart rend="italic">Par M<hi rend="superscript">e</hi>
+       <persName rend="capital">Henri Sauval</persName> Avocat
+       <lb />au Parlement.</titlePart>
+      <titlePart>Tome premier.</titlePart>
+    </docTitle>
+    <metamark rend="culDeLampe" />
+    <docImprint>
+        <pubPlace>À Paris,</pubPlace>
+        <publisher>Chés Charles Moette, Libraire, rue de la Bouclerie à
+          St Alexis, près le Pont <abbr>St</abbr> Michel.</publisher>
+        <publisher>Chés Jacques Chardon, Imprimeur-Libraire, rue du
+          Petit-Pont, au bas de la rue <abbr>St</abbr> Jacques à la
+          Croix d'or.</publisher>
+        <docDate when="1724">M. DCC XXIV.</docDate>
+      </docImprint>
+    <imprimatur rend="capital">Avec privilège du Roy</imprimatur>
+  </titlePage>
+```
+---
+
+# Tableau de tradition
+
+```xml
+<listWit>
+  <witness xml:id="A">
+    <msDesc>
+      <msIdentifier>
+        <country>France</country>
+        <settlement>Paris</settlement>
+        <repository>Archives nationales</repository>
+        <collection>Monuments ecclésiastiques</collection
+        <idno>S 2364 n° 5</idno>
+      </msIdentifier>
+    </msDesc>
+  </witness>
+  <witness xml:id="B">
+    <msDesc>
+      <msIdentifier>
+        <country>France</country>
+        <settlement>Paris</settlement>
+        <repository>Archives nationales</repository>
+        <collection>Monuments ecclésiastiques</collection>
+        <idno>LL1157 p. 383b-384b, n° XXXVI</idno>
+        <msName>Cartulaire blanc de l’abbaye de Saint-Denis, tome I</msName>
+      </msIdentifier>
+      <msContents>
+        <msItem>
+          <rubric xml:lang="lat" >De dimidio arpento vinee nobis vendito a Petro de Cellario <num value="36">XXXVI</num></rubric>
+        </msItem>
+      </msContents>
+    </msDesc>
+  </witness>
+</listWit>
+```
+
+---
+
+template: inverse
+class: center middle
+
+# Maintenant, passons à [la pratique](ex02-teiMacrostructure.html) !
+
+.left[.footnote[[revenir au début](#index)]]
+
+    </textarea>
+    <!--<script src="http://gnab.github.com/remark/downloads/remark-0.6.5.min.js" type="text/javascript"></script>-->
+        <script src="js/remark-0.6.5.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var hljs = remark.highlighter.engine;
+    </script>
+    <script src="remark.language.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      var slideshow = remark.create({
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark'
+        }) ;
+    </script>
+
+  </body>
+</html>
