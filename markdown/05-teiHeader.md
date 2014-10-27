@@ -56,6 +56,12 @@ template: inverse
 
 ---
 
+name:
+
+# Sources et bibliographie
+
+---
+
 name: sourcesBiblio
 template: inverse
 class: center middle
