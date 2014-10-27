@@ -50,43 +50,86 @@ La plupart des contenus des bibliothèques numériques aujourd’hui mis à disp
 
 layout: false
 
-.left-column[
+# e.red[X]tensible .red[M]arkup .red[L]anguage – historique
 
-## .red[Historique]()
+### héritier de SGML (Standard Generalized Marku Language)
 
-## Caractéristique
+- métalangage informatique pour le balisage du texte
 
-## Extensible
+- norme ISO (ISO 8879:1986)
 
-]
+## publication par le W3C en février 1998
 
-.right-column[
+- des spécifications du métalangage XML 1.0
 
-# e.red[X]tensible .red[M]arkup .red[L]anguage
+- maîtres mots : simplicité, clarté, universalité
 
-### basé sur SGML
-
-### Première version du langage 1998
-
-### version 1.1
-
-]
-
---
-
-.left-column[
-
-## extensible
-
-## ctrl
-
-]
+- [version 1.1](http://www.w3.org/TR/xml11) en 2004
 
 ???
 
+## héritier de SGML
+
+SGML lui-même héritier d'un langage descriptif conçu en 1969 par des ingénieurs de la société IBM : DCF (Document Composition Facility).
+
+SGML : puissant et générique mais aussi trop souple et complexe en même temps → surtout utilisé dans le cadre d'applications lourdes. Utilisation la plus notable : langage HTML, dérivé du SGML => langage de publication pour le web.Né en 1989 et depuis 2011, HTML 5.
+
+## Publication de XML
+
+En février 1998 : publication en février 1998 par le W3C Consortium des spécifications du métalangage XML 1.0 => maîtres mots : simplicité, clarté, universalité.
+
 Dans son Référentiel général  d’interopérabilité publié en 2009, la Direction générale de la modernisation de l’État recommande l’utilisation des technologies XML (Extensible Markup Language) à des fins d’interopérabilité et de pérennisation de l’information.
 
+Depuis 1998, la norme XML a peu évolué → dernière édition en date : 5e édition, mise à jour en 2008. Version 1.0 => véritable témoignage de sa stabilité.
+
+Version 1.1. publiée en février 2004 et mise à jour en 2006, notamment pour intégrer les évolution d'Unicode, mais XML 1.1 reste très peu utilisé.
+
+## Un succès immédiat
+
+Les langages et outils permettant de produire, contrôler, échanger, transformer et exploiter des fichiers XML se sont multipliés, souvent associés à des normes du W3C : modèles de documents et de (méta)données, langages de modélisation, de présentation, de programmation, protocoles, …
+
+Métalangage désormais utilisé partout en informatique qu'il s'agisse de structurer des informations dont la durée de vie est importante ou d'échanger des informations entre applications, qu'on ait à s'occuper essentiellement de données, de documents ou d'une combinaison des deux.
+
+
 - cf. Ministre du Budget, des Comptes publics, [Référentiel Général d'Interopérabilité (RGI)](http://references.modernisation.gouv.fr/rgi-interoperabilite), 2009.
+
+---
+
+# Principes de conception de .red[XML]
+
+### applicable à tout type de texte
+
+### extensible
+
+### définition par un schéma
+
+### hypertextualité
+
+### simple, universel
+
+### modèle hiérarchique
+
+???
+
+- XML s'applique à tout type de texte : fondé sur le principe du balisage → càd : sur l'isolement d'une portion de texte et l'identification explicite de son rôle ou nature particulière. Autorise l'imbrication des balises et une granularité aussi fine que nécessaire.
+
+- Un modèle (=la liste des balises utilisables, leurs noms, les contraintes de leur emploi : position, cardinalité, type de contenu) peut être défini sous la forme d'une DTD (Document Type Definition) ou d'un schéma (écrit en RelaxNG ou directement XML).
+
+- XML permet d'identifier la structure d'un texte et d'informer sur la sémantique des informations qu'il contient, ou d'en isoler les données => notion de structuration absolument primordiale : permet de rendre l'information exploitable par la machine (moteurs de recherche) et par l'utilisateur ; permet également à l'information d'être réutilisée, échangée, pérénisée. + bonne structure seule condition pour ensuite une transformation automatique.
+
+- XML conçu à l'ère de l'hypermédia : liens peuvent être établis entre des sections du même document XML ou entre un document XML et d'autres ressources électroniques, qui peuvent ne pas être du texte.
+
+- norme simple, sans ambiguité, permettant à un humain de lire l'information produite.
+
+- fichiers XML sont des fichiers texte (peuvent être lus par grand nombre de logiciels donc) et supportent surtout un grand nombre de systèmes d'écriture → utilise le standard Unicode et le codage par défaut de XML est UTF-8 (codage de caractères conçu pour coder l'ensemble des caractères Unicode).
+
+- norme universelle, concentrée sur le contenu informationnel, ne traitant pas de son utilisation, indépendante des plates-formes informatiques (≠.odt, .doc, …).
+
+- utiliser XML pour structurer et échanger l'information est considéré comme une bonne pratique → les documents XML sont de bons candidats pour l'archivage pérenne.
+- grâce à leur structure réutilisation : l'accès, l'indexation et la recherche de l'information sont améliorées → on peut avec certains outils informatiques indexer un (ou un ensemble de) documents XML en exploitant leur marquage structurel, ce qui permet des recherches fines multi-critères et améliore considérablement la qualité des réponses par rapport à une recherche plein texte dans un document non structuré.
+
+- on peut aussi explorer un document XML en tant qu'arbre, en utilisant notamment le langage Xpath.
+=> XML : format de stockage pour autant de formats de diffusion qu'on souhaite. Après transformation par programmes dans un ou plusieurs formats dédiés, le contenu structuré d'un document XML peut être consulté sous forme imprimée (transformation directement en PDF ou vers LateX), sous forme électronique (HTML) => XML : format pivot pour les nouvelles chaînes éditoriales.
 
 ---
 

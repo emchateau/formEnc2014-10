@@ -57,26 +57,47 @@ template: inverse
 
 # Comment rendre compte de la .red[source primaire]
 
-## - Objectivité / parti-pris
+## Objectivité / parti-pris
 
-## - Édition de sources primaires
+## Édition de sources primaires
 
-## - Matérialité de l'édition
+## Matérialité de l'édition
 
 ???
 
+On parle d’édition critique, ou d’édition scientifique, l’adjectif dans appellation venant en désigner le caractère savant, au sens où il s’agit de produire une reproduction contrôlée d’un texte dont sont procurés les états, versions, variantes et leçons. De ce point de vue, l’édition critique constitue selon la définition du manuel de l’École nationale des chartes sur l’édition des textes médiévaux un : « Essai de reconstitution d’un texte, pour lequel l’éditeur pèse chacun des mots du texte en se servant de tous les moyens de jugement dont il dispose. Cas particuliers : l’édition imitative ou diplomatique qui reproduit très exactement un document unique, jusqu’en ses particularités graphiques et mêmes ses erreurs, commentées à part mais pas corrigées dans le texte ; l’édition synthétique, intégrant différents états du texte suffisamment peu différents, moyennant un artifice typographique, avec comme variante l’édition génétique, qui rend compte par des artifices typographiques des différentes couches et états successifs du texte ; l’édition variorum, qui donne le texte accompagné, outre l’apparat normal des variantes, de toutes les solutions des éditeurs précédents.  »
+
+-   Bourgain, Pascale, et Vielliard, Françoise, Conseils pour l’édition des textes médiévaux, Paris, Comité des travaux historiques et scientifiques / École nationale des chartes, 2002, (Documents d'archives, n° Fascicule III, Textes littéraires).
 
 ---
 
 #Critères de scientificité
 
-## fiable
+## Fiable
 
-## consistante
+## Consistante
 
-## justification des partis pris
+## Justification des partis-pris
+
+???
+
+Même si le domaine de l’édition scientifique a connu de profonds changements au cours de ces dernières années avec l’irruption du numérique, les opérations à la base de toute édition critique sont toutefois restées pour l’essentiel identiques. La tâche principale de l’éditeur est de produire un texte fiable et consistant, avec des partis-pris éditoriaux explicites et appropriés. Une telle édition mobilise des savoirs relativement étendus. Elle implique que l’éditeur dispose non seulement des savoirs traditionnellement associés à l’édition des sources primaires. Il doit en effet être en mesure d’identifier comment le texte a été construit, à la fois comme document et comme instance de l’œuvre. Il doit également savoir comment celui-ci a été transmis, altéré ou transformé au cours du temps, etc. Mais l’éditeur doit encore être en mesure de connaître son lectorat, et d’identifier la meilleure manière de communiquer les textes, et ce qu’il en sait. Ainsi : « Une édition critique n’est pas une reproduction photographique. Elle résulte d’un compromis raisonnable entre, d’une part, le respect du texte à publier (dont on ne doit en aucun cas moderniser la graphie) et, d’autre part, le souci de le rendre aussi intelligible que possible pour un lecteur d’aujourd’hui.  »
+
+- Barbiche, Bernard, Chatenet, Monique, Delmas, Jean, Guyotjeannin, Olivier, et Belhoste, Jean-François, L'Édition des textes anciens : XVIe-XVIIIe siècle, Paris, Association Études, loisirs, patrimoine, 1993, (Documents & méthodes / Inventaire général des monuments et des richesses artistiques de la France, n° 1).
 
 ---
+
+# Un investissement important
+
+## Méthode de travail adaptée (temps long, travail en équipe)
+
+## Interopérabilité
+
+## Pérennité
+
+???
+
+La production d’une édition critique de qualité exige donc d’avoir bien défini sa destination. Cette question est déterminante même si l’on ne renonce généralement pas à toucher un public un tant soit peu élargi. S’agissant ici de mettre à disposition un corpus de textes inédits, établi d’après une tradition abondante de témoins manuscrits, l’édition des cours de Desgodets offrait un intérêt tout particulier pour l’historien de l’art et l’historien du droit. Elle se devait de présenter toutes les qualités habituellement requises par une édition de haute tenue scientifique en termes de fiabilité, de solidité et de justification des partis pris. S’agissant d’un matériau entièrement neuf pour la recherche, il s’agissait également de faciliter son étude et de prendre en compte certaines particularités propres à des manuscrits architecturaux pour la consultation.
 
 # Un investissement important
 
@@ -122,7 +143,6 @@ template: inverse
 
 # Encodage descriptif / encodage présentationnel
 
-
 ???
 
 Parce qu’il détermine tous les traitements informatiques qu’il est possible d’effectuer sur le texte, le balisage a historiquement constitué une question fondamentale dans l’histoire de l’informatique. Depuis l’article séminal de Coombs et ses collègues, on a pris l’habitude de distinguer plusieurs types de balisages : procédural, présentationnel, ou descriptif.
@@ -157,7 +177,7 @@ Ce faisant l’auteur d’un balisage fournit une **information sémantique** et
 
 # Procédure mise en œuvre lors du .red[balisage]
 
-###  Reconnaissance des éléments
+### Reconnaissance des éléments
 
 ### Sélection des balises
 
@@ -218,7 +238,80 @@ Contrairement aux apparences, les logiciels de traitement de texte qui mettent e
 
 Autrement dit, le balisage descriptif offre un certain nombre d’avantages pour l’éditeur. Outre qu’il **permet de partager des documents pour collaborer sans se préoccuper d’éventuelles incompatibilités**, il offre un **gain de temps de production et de gestion en permettant la réalisation de plusieurs éditions successives à partir d’un même fichier source, ou de produire plusieurs manifestations (présentations) d’un même fichier**. De surcroît, ce balisage permet le plus souvent la **génération automatique de l’information bibliographique** directement à partir du fichier source (ce qui réduit les erreurs et permet une citation aisée dans les bases bibliographiques) ou d’inclure directement des documents dans des bases de données en ligne pour la publication et la recherche plein-texte.
 
+
 ---
+
+
+???
+
+La méthode d’édition critique bien établie, il convient de régler le problème pratique de la présentation de l’édition. Ces choix déterminaient les modalités de consultation du texte. Même si une édition numérique offre plus de souplesse qu’une édition imprimée, elle n’en reste pas moins problématique sous cet aspect qui tient du parti-pris éditorial. Là encore, il n’existe pas de solution absolue en la matière, le meilleur dispositif étant celui qui sert le mieux le point de vue éditorial adopté ou qui offre les meilleures conditions d’accessibilité au texte. Avant de pouvoir établir un cahier des charges fonctionnel, il fallait donc arrêter clairement ce que devait véhiculer l’édition d’un point de vue scientifique. Les pré-requis pour l’édition que nous voulions produire étaient soit généralement liés au respect des conventions de l’édition scientifique, soit propres aux spécificités du corpus édité.
+
+---
+
+# Présentation de l'apparat critique
+
+???
+
+La longue tradition de l’édition critique détermine en grande partie ce qu’est en droit d’attendre un lecteur lors de la consultation d’une édition. Elle fixe un ensemble de prérequis qui qualifient en grande partie l’édition. Au cours du temps, cette tradition a généré une grande richesse dans l’emploi des marques typographiques (barres, crochets, soufflets, etc.) pour signifier telle ou telle caractéristique matérielle, mais celles-ci n’ont pas toujours la même signification à travers les éditions. Elle a également fixé un certain nombre d’habitudes pour donner des éléments de repérage et de citabilité, pour indiquer la pagination du texte de base, une numérotation marginale des lignes, etc.
+
+L’utilisation du support numérique a donné l’occasion d’explorer de nouvelles formes de présentation de l’apparat critique. Sa malléabilité a notamment permis d’envisager de manière nouvelle la présentation des variantes puisqu’elle permet de proposer alternativement plusieurs vues sur un même texte, ou encore par exemple de proposer à bien moindre frais qu’avec l’imprimé des éditions dites hyper-diplomatiques qui présentent des fac simili en regard du texte édité. Il n’en reste pas moins qu’une bonne édition numérique se doit de respecter un certain nombre de standards éditoriaux en particulier pour faciliter la citation ou rendre la consultation de l’apparat critique ou des notes de commentaire historique la plus aisée possible.
+
+Dans une édition critique d’un texte ancien, on appelle apparat critique l’ensemble des notes fournies par l’auteur de l’édition pour justifier des choix opérés dans l’édition ou signaler certaines particularités de la source. L’apparat critique d’une édition a essentiellement une fonction descriptive. Il concerne la description des particularités matérielles du texte transcrit, et celle des autres états du texte s’il en existe par un relevé des leçons pour chaque passage.
+
+Il est d’usage de fournir les leçons variantes du texte au moyen de notes critiques habituellement numérotées alphabétiquement. Bien que l’édition numérique permette de les afficher d’une autre manière (par exemple en proposant plusieurs vues), il a été choisi de les présenter en note. N’ayant pas totalement renoncé à une édition imprimée, une telle présentation permettait notamment d’être identique dans les deux versions. D’autre part, cette solution correspondait assez bien au mode de production du texte qui, comme nous le verrons plus loin, a été traité par les auteurs de l’édition critique à partir d’un logiciel de traitement de texte.
+La lecture du texte ne présentant le plus souvent pas de difficultés très spécifiques, les autres aspects de l’apparat critique, comme l’indication des lacunes, des difficultés de lecture, ou des segments sémantiquement incorrects, etc., utilisent également une présentation typographique conventionnelle. Néanmoins, elle peut être enrichie par des artifices de présentation que permet le numérique tels que l’affichage au survol, etc.
+
+---
+
+# Glossaires et index
+
+???
+
+Outre cet apparat critique et historique, nous avions le désir de fournir un glossaire des termes architecturaux et juridiques. C’est-à-dire une liste alphabétique des mots difficiles jouant le rôle d’un dictionnaire propre au texte pour favoriser sa compréhension  . En dehors des aspects de vulgarisation, un tel glossaire répondait aussi assez bien au caractère pluri-disciplinaire de l’édition pouvant à la fois intéresser les historiens de l’architecture et les historiens du droit.
+
+Plusieurs index permettent également d’offrir différents types d’accès aux textes. En plus des index patronymiques et toponymiques habituellement requis dans une édition critique, nous envisagions l’établissement d’un index des matières. De tels index devaient fournir des listes d’occurrences dans les textes classées par cours.
+
+
+---
+
+# Recherche plein texte
+
+???
+
+Outre les index qui relèvent en grande partie de l’apparat critique, il s’agissait également de proposer au lecteur une recherche plein texte. La recherche dite plein texte est l’une des modalités de consultation du texte spécifiquement permise par le support numérique. Il nous parâit donc difficile de s'en passer. Toutefois, pour être efficace, une telle recherche suppose un traitement particulier de la langue qui n’est pas sans présenter quelques difficultés ; a fortiori lorsque le texte n’était pas modernisé. Si une telle fonctionnalité apparemment simple pour l’utilisateur nous paraissait nécessaire et attendue, sa mise en place efficace était loin d’être triviale.
+
+---
+
+# L'hypertextualité
+
+???
+
+L’édition électronique proposée possède de nombreux avantages pratiques sur l’édition imprimée. D’abord, elle est de loin moins coûteuse à produire et peut être directement mise à disposition d’un très grand nombre de lecteurs. Surtout elle rend possible des recherches textuelles et permet d’accéder rapidement aux informations qu’elles contiennent en utilisant l’hypertextualité.
+
+À cet égard, l’utilisation de l’hypertexte rend particulièrement maniable toute l’information para-textuelle qui peut accompagner l’édition. Les index électroniques, et les listes d’occurrences lorsqu’ils existent dans le format papier sont bien moins maniables qu’avec le numérique. De surcroît, l’édition électronique permet d’envisager des traitements automatisés qui présentent un réel gain de temps dans l’établissement de telles modalités d’accès au contenu. Elle permet également de produire une visualisation plus contextuelle des entités.
+
+L’édition numérique se caractérise également par la possibilité de permettre des enrichissements interactifs de l’édition. Afficher des définitions au survol, proposer des hyperliens.
+
+Dans un tel contexte, il n’y a plus de texte définitif. Le numérique est un support labile qui permet les enrichissements successifs et les améliorations. L’utilisation de système de gestion de versions règle les problèmes de citation. Plutôt que de concevoir le travail comme un objet terminé, il n’est plus nécessaire d’attendre l’achèvement complet du travail pour mettre à disposition le matériel ou exposer le travail en cours. De telles dispositions peuvent toutefois heurter les cadres de pensée habituels. La publication du texte des témoins comme matériel justificatif a ainsi fait l’objet de discussions assez vives au sein de notre équipe, la majorité des membres ne souhaitant pas publier de contenus avait qu’ils n’aient été entièrement révisés.
+
+La finesse de l’enregistrement que le balisage rend possible est paradoxalement parfois difficile à exprimer de manière typographique. Car le support numérique ne fait pas complètement disparaître la matérialité du texte  . Il conditionne au contraire les lectures du texte. Il n’est d’ailleurs pas contradictoire avec une édition papier. Celle-ci n’a simplement pas la même autorité, et n’offre pas la même qualité de lecture. Il s’agit simplement d’envisager différents usages en fonction des supports.
+
+---
+
+# Offrir plus de choix au lecteur
+
+
+???
+
+Dans sa présentation de 2013, A Bag of Words, Edward Vanhotte soulèvait la question de ce que pourrait être une édition numérique par rapport à ce qu’elle est en définitive aux prises avec diverses contraintes qui pèsent sur sa production. Ce faisant, il déconstruisait à cette occasion plusieurs mythes sur la nature des éditions numériques. Notamment le fait que celles-ci seraient plus accessibles, ou permettrait d’offrir un accès plus rapide ou plus direct à des sources que des éditions imprimées.
+Une édition imprimée est par nature accessible, généralement fournie pour une audience clairement ciblée et lorsqu’il s’agit d’une édition scientifique elle adopte le plus souvent des critères explicites. En réalité, et pour reprendre les termes d’Edward Vanhoutte, une édition numérique présente une accessibilité « qualitativement différente ». Le media numérique permet notamment la recherche plein texte que n’offre pas le support imprimé. Notre édition numérique met également en place toute une série d’index dont l’utilisation repose entièrement sur l’hypertextualité.
+
+
+Qu’importe l’honnêteté ou la transparence de l’éditeur, le support imprimé impose une structure particulière, une séquence, une mise en page, etc. Ce qui change avec l’électronique ce sont les hiérarchies qui libèrent les choix du lecteur. Mais le numérique n’est pas sans conséquence sur le texte lui-même et sa lecture.
+
+Avec une édition électronique, on peut également de proposer au lecteur de produire sa propre édition en fonction de ses lectures ou des utilisations qu’il souhaite faire de la source. Bien sûr pour ce faire il demeure nécessaire que l’éditeur ait considéré à l’avance ces questions de sorte qu’il puisse ménager les utilisations potentielles en laissant libre le plus de choix possibles. Il s’agit donc de produire un dispositif, d’offrir selon l’expression de Corinne Welger-Barboza un « corpus outillé ».
+
+
 
 template: inverse
 

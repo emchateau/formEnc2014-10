@@ -27,7 +27,7 @@ class: left
 - Se familiariser avec l'édition électronique et la TEI
 - Acquérir une première expérience d'encodage en XML/TEI
 - Évaluer les possibilités de recherche et évaluer les moyens nécessaires
-- introduction aux langages XPath et XSL pour mettre en ligne une édition
+- Introduction aux langages XPath et XSL pour mettre en ligne une édition
 
 ## Contenus
 
