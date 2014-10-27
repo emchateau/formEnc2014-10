@@ -10,7 +10,7 @@ class: inverse
 name: index
 class: center middle
 
-# 01 – eXtensible Markup Language
+# 01 – e.red[X]tensible .red[M]arkup .red[L]anguage
 Formation TEI | ENC 27-30 octobre 2014
 
 .footnote[[Répertoire GitHub](https://github.com/emchateau/formEnc2014-10) | [Programme](00-programme.html)]
@@ -295,7 +295,7 @@ Règles pour l’écriture de ces noms (parfois appelés identificateurs gé
 
 - le nom ne peut pas commencer par "xml" (quelle que soit la casse utilisée).
 
-- Attention, XML est sensible à la casse.
+- Attention ! XML est sensible à la casse.
 
 ---
 
@@ -353,7 +353,9 @@ sections de caractères non parsées. Commencent par `[! [CDATA[` et se termin
 ```
 
 - formellement défini par son namespace-uri
+
 - déclaré avec l'attribut .red[xmlns]
+
 - déclaration par défaut
 
 ???

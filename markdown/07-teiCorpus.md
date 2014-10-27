@@ -16,15 +16,9 @@ Formation TEI | ENC 27-30 octobre 2014
 
 ---
 
-layout: false
-.left-column[
-  ## Introduction
-]
+class: center middle
 
-.right-column[
-# Corpus TEI
-
-]
+## Introduction
 
 ???
 
@@ -55,19 +49,20 @@ name: liens
 template: inverse
 class: center middle
 
-# Les .red[liens]
+# .red[1] Les liens
 
 ---
+layout: false
 
 # Créer des liens
 
-### <ptr/> pointeur vers un autre emplacement (élément vide)
+### `<ptr/>` pointeur vers un autre emplacement (élément vide)
 
 ```xml
 <ptr target="url.fr"/>
 ```
 
-### <ref/> référence vers un autre emplacement (complément d'information)
+### `ref` référence vers un autre emplacement (complément d'information)
 
 ```xml
 <ref type="note" target="#nH201">Passage annoté</ref>
@@ -85,9 +80,9 @@ class: center middle
 
 # Notes de commentaire historique
 
-### .red[<note>] élément note
+### `note` élément pour l'enregistrement d'une note
 
-- soit encodé directement dans le texte
+- soit encodée directement dans le texte
 
 - soit regroupées à un autre endroit
 
@@ -134,7 +129,7 @@ name: corpus
 template: inverse
 class: center middle
 
-# Les .red[corpus]
+# .red[2.] Les corpus
 
 ---
 
@@ -267,7 +262,7 @@ name: figures
 template: inverse
 class: center middle
 
-# Les .red[figures et facsimili]
+# .red[3.] Les figures et facsimili
 
 ---
 
@@ -357,6 +352,6 @@ On peut également pointer vers l'élément facsimile depuis un élément `pb` m
 template: inverse
 class: center middle
 
-# Les [entités nommées](08-namedEntities.html)
+# Pour finir, les [entités nommées](08-namedEntities.html)
 
 .left[.footnote[[revenir au début](#index)]]

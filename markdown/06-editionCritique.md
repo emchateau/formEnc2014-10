@@ -16,15 +16,16 @@ Formation TEI | ENC 27-30 octobre 2014
 
 ---
 
-layout: false
-.left-column[
-  ## Introduction
-]
+class: center middle
 
-.right-column[
-# Édition critique
+## Introduction
 
-]
+???
+
+La TEI présente de nombreux mécanismes spécialement destinés à la prise en charge des éditions critiques.
+
+La pluspart placés dans le module `transcr`, d'autres dabs `msdescription`.
+Modules qui sont parfois à propos augmentés par `certainty`.
 
 ---
 
@@ -52,26 +53,28 @@ name: inscription
 template: inverse
 class: center middle
 
-# L'.red[inscription du texte] sur le support
+# .red[1.] L'inscription du texte sur le support
 
 ---
+
+layout: false
 
 ## Ajouts et surplus
 
 
-### .red[<add>] texte ajouté
+### `add` texte ajouté
 
 ```xml
 <add place="above">nous</add>
 ```
 
-### .red[<del>] texte supprimé
+### `del` texte supprimé
 
 ```xml
 <del rend="overstrike">claustra</add>
 ```
 
-### .red[<subst>] substitutions (génétique)
+### `subst` substitutions (génétique textuelle)
 
 ```xml
 <subst>
@@ -84,26 +87,29 @@ class: center middle
 
 # Prise en charge des lacunes
 
-### .red[<gap>] passage ne pouvant pas être restitué pour des raisons matérielles
+### `gap` passage ne pouvant pas être restitué pour des raisons matérielles
 
 ```xml
 <gap reason="illegible" agent="ink-blot" />
 ```
 
-### .red[<unclear>] passage en partie illisbile
+### `unclear` passage en partie illisible
 
 ```xml
 <unclear agent="ink-blot" cert="low" resp="#EC" />
 ```
 
-### .red[<suplied>] passage en partie illisbile
+### `suplied` restitution d'un passage manquant
 
 ```xml
 <supplied reason="hole" source="#autreEd">les</supplied>
+```
 
 ???
 
 Ne pas confondre gap et space qui sert à désigner un espace blanc jugé significatif
+
+Plusieurs attributs issus du module `certainty` qui peuvent vous permettre de préciser la certitude des restitutions.
 
 ```
 xml<space quantity="1" unit="cm">
@@ -115,19 +121,19 @@ name: corrections
 template: inverse
 class: center middle
 
-# Les .red[corrections éditoriales]
+# .red[2.] Les corrections éditoriales
 
 ---
 
 # Passages fautifs
 
-### .red[<sic>] passage fautif, ou segment syntaxiquement incorrect
+### `sic` passage fautif, ou segment syntaxiquement incorrect
 
-### .red[<corr>] correction de l'éditeur
+### `corr` correction de l'éditeur
 
-### .red[<abbr>] abréviation
+### `abbr` abréviation
 
-### Utilisation de .red[<choice>]
+### utilisation de `choice`
 
 ```xml
 <choice>
@@ -155,15 +161,15 @@ name: variantes
 template: inverse
 class: center middle
 
-# Les .red[variantes] et les .red[mains]
+# .red[3.] Les variantes et les mains
 
 ---
 
 # Description des mains
 
-### .red[@hand]
+### `@hand`
 
-### .red[handDesc] et ses sous-éléments dans le header
+### `handDesc` et ses sous-éléments dans le header
 
 ```xml
 <handDesc>
@@ -180,7 +186,7 @@ handNote est répétable et peut contenir une localisation avec locus.
 
 # Les variantes
 
-# Trois approches pour l'alignement
+# Trois approches pour l'.red[alignement]
 
 Les Guidelines proposent trois approches pour aligner des passages textuels lorsque l’on établit une édition critique :
 
@@ -207,11 +213,11 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 
 # Segmentation parallèle
 
-### .red[<app>] entrée d'apparat critique
+### `app` entrée d'apparat critique
 
-### .red[<lem>] lemme ou leçon retenue du texte
+### `lem` lemme ou leçon retenue du texte
 
-### .red[<rdg>] variante (lecture)
+### `rdg` variante (lecture)
 
 ```xml
 <app>
@@ -225,11 +231,11 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 
 # Variantes
 
-### .red[<rdgGrp>] pour regrouper plusieurs variantes ayant un lien entre elles
+### `rdgGrp` pour regrouper plusieurs variantes ayant un lien entre elles
 
-### .red[@type] pour catégoriser la variante
+### `@type` pour catégoriser la variante
 
-### .red[@cause] pour expliciter la cause de la variante
+### `@cause` pour expliciter la cause de la variante
 
 ---
 
@@ -250,21 +256,10 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
   </witness>
   <witness xml:id="B">
     <msDesc>
-      <msIdentifier>
-        <country>France</country>
-        <settlement>Paris</settlement>
-        <repository>Archives nationales</repository>
-        <collection>Monuments ecclésiastiques</collection>
-        <idno>LL1157 p. 383b-384b, n° XXXVI</idno>
-        <msName>Cartulaire blanc de l’abbaye de Saint-Denis, tome I</msName>
-      </msIdentifier>
-      <msContents>
-        <msItem>
-          <rubric xml:lang="lat" >De dimidio arpento vinee nobis vendito a Petro de Cellario <num value="36">XXXVI</num></rubric>
-        </msItem>
-      </msContents>
+      <!-- ... -->
     </msDesc>
   </witness>
+  <!-- répéter l'élément witness autant de fois que de témoins -->
 </listWit>
 ```
 
@@ -291,6 +286,6 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 template: inverse
 class: center middle
 
-# Gérer des [structures complexes](07-teiCorpus.html)
+# Exemple d'[apparat critique](ex04-witness.html)
 
 .left[.footnote[[revenir au début](#index)]]

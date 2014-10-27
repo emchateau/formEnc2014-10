@@ -144,7 +144,7 @@ Transcription et édition scientifique par Marie-Hélène de La Mure, conservate
 
 # Associer son fichier à un schéma
 
-## XSM Schema
+## XML Schema
 
 ```xml
 <TEI xmlns="http://www.tei-c.org/ns/1.0"

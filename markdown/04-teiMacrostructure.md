@@ -380,6 +380,7 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 - `name`, `persName`, `placeName` noms, noms de personne, de lieu
 
 - `fw`  permet d’encoder un titre courant (en haut ou en bas de la page), une réclame ou une autre information comparable
+
 ---
 
 ## Attributs globaux (toujours disponibles)

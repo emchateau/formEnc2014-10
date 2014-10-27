@@ -310,6 +310,6 @@ Utilisation de l'élément
 template: inverse
 class: center middle
 
-#
+# [exercice](ex06-namedEntities.html)
 
 .left[.footnote[[revenir au début](#index)]]

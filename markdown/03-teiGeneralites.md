@@ -668,9 +668,7 @@ name: conclusion
 template: inverse
 class: center middle
 
-
 # Conclusion
-
 
 ???
 
