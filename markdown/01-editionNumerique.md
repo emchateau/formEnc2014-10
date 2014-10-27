@@ -94,6 +94,14 @@ template: inverse
 
 ## L'expressivité
 
+## Ce que l'on peut attendre d'une édition critique numérique
+
+- Documentation de l'édition
+
+- Contrôle de la production
+
+- Perennité et interopérabilité
+
 ---
 
 # Exemples
@@ -102,19 +110,13 @@ template: inverse
 
 ### [hyperdonnat](http://elec.enc.sorbonne.fr)
 
+### [Roman du Mont Saint-Michel](http://www.unicaen.fr/puc/sources/gsp/www.unicaen.fr/services/puc/sources/gsp/index-2.html)
+
+### [Mercure galant](http://obvil.paris-sorbonne.fr/corpus/mercure-galant/)
+
 ### [vangoghletters.org](http://vangoghletters.org/vg/)
 
 ### [sandrart.net](http://www.sandrart.net/de/)
-
----
-
-Ce que l'on peut attendre d'une édition critique numérique
-
-Documentation de l'édition
-
-Contrôle de la production
-
-Perennité et interopérabilité
 
 ---
 
