@@ -93,6 +93,7 @@
             <extent><!-- taille du fichier en octet --></extent>
             <!-- information sur la publication électronique -->
             <publicationStmt>
+                <publisher>CTAD</publisher>
                 <date when="2013">2013</date>
                 <!-- voir si on attribue un DOI ou un identifiant ARK aux fichiers édités -->
                 <idno n="criticalEdition" type="URI">c2</idno>

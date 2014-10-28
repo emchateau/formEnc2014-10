@@ -38,7 +38,7 @@ template: inverse
 
 ## 2. [Les composants du header](#composants)
 
-## 3. La description du [manuscrit](#description)
+## 3. [La description du manuscrit](#description)
 ]
 
 ---
@@ -47,7 +47,7 @@ name: metadonnees
 template: inverse
 class: center middle
 
-# L'importances des métadonnées
+# .red[1.] L'importances des métadonnées
 
 ---
 
@@ -57,9 +57,21 @@ layout: false
 
 ### autoportées
 
-### intégration dans des bibliothèques numériques
+### intégration possible dans des bibliothèques numériques
+
 
 ### choix des modèles descriptifs
+
+- cohérent avec la politique de votre établissement
+
+- possibilité de mapping avec d'autres modèles
+
+- conformité aux bonnes pratiques
+
+
+Glorieux, Frédéric, et Jolivet, Vincent, [« weboai, Human web interface on OAI repository »](http://weboai.sourceforge.net), SourceForge.
+
+https://sourceforge.net/p/weboai/wiki/Home/
 
 ???
 
@@ -75,7 +87,7 @@ name: composants
 template: inverse
 class: center middle
 
-# Les composants du teiHeader
+# .red[2.] Les composants du teiHeader
 
 ---
 
@@ -115,11 +127,11 @@ class: center middle
 
 # fileDesc
 
-## trois éléments mandataire
+## trois éléments mandataires
 
 - `titleStmt` mentions de titre et de responsabilité
 
-- `publicationStmt` mention de publication (du texte électronique)
+- `publicationStmt` mentions de publication (du texte électronique)
 
 - `sourceDesc` renseignements sur la source dont est issu le fichier numérique
 
@@ -160,6 +172,99 @@ class: center middle
 </titleStmt>
 ```
 
+---
+
+# encodingDesc
+
+- Élément optionnel destiné à documenter l'encodage. Il accueille :
+- soit des structures simples avec des paragraphes <p>
+- une description structurée à l'aide des éléments
+
+- `projectDesc` description de l'objectif de l'édition électronique
+
+- `samplingDesc` méthode d'échantillonnage
+
+- `tagsDecl` description du balisage employé
+
+- `refDecl` précision sur la construction des références canoniques
+
+- `geoDecl` système de notation des coordonnées géographiques
+
+- `schemaSpec` spécification de schéma
+
+---
+
+# encodingDesc
+
+```xml
+<encodingDesc>
+  <charDecl>
+    <glyph xml:id="uut">
+      <glyphName>two latin small letter u with macron and vertical
+        line</glyphName>
+      <charProp>
+        <localName>entity</localName>
+        <value>omega2</value>
+      </charProp>
+      <mapping type="composed">&#117;&#862;&#117;&#862;&#124;</mapping>
+      <graphic url="x2.jpg"/>
+    </glyph>
+  </charDecl>
+  <editorialDecl>
+    <normalization>
+      <p>La ponctuation a été ajoutée, conformément...</p>
+      <p>les mots ont été séparés lorsque l'usage actuel...</p>
+    </normalization>
+  </editorialDecl>
+</encodingDesc>
+```
+
+???
+
+Pour les ouvrages imprimés, hyphenation
+
+```xml
+<hyphenation>
+  <p>Pour les ouvrages imprimés, il n’a pas été tenu compte de l’hyphénation.</p>
+</hyphenation>
+```
+
+---
+
+# profileDesc
+
+- `abstract` bref résumé
+
+- `creation` informations sur la création du texte
+
+- `langUsage` langues présentes dans le texte
+
+- `textClass` nature du texte d'après un thesaurus interne ou externe
+
+```xml
+<profileDesc>
+  <creation>
+    <date when="2009-04-20">20 avril 2009</date>
+  </creation>
+  <langUsage>
+    <language indent="fre" scope="60">Français</language>
+    <language ident="lat" scope="40">Latin</language>
+  </langUsage>
+</profileDesc>
+```
+---
+
+# revisionDesc
+
+Enregistre les révisions et modifications du fichier
+
+```xml
+<revisionDesc>
+  <change when="2009-11" who="#VJ">Deuxième édition éclectronique</change>
+  <change when="2009-10" who="#FG">Schéma et transformations</change>
+  <change when="2009-10" who="#CD">Encodage de l'apparat critique</change>
+</revisionDesc>
+```
 
 ---
 
@@ -167,7 +272,165 @@ name: description
 template: inverse
 class: center middle
 
-# La description des manuscrits
+# .red[3.] La description des manuscrits
+
+---
+
+# msDesc (dans sourceDesc)
+
+L'élément `sourceDesc` est obligatoire et sert à la description des manuscrits.
+
+Ici, le module `msdescription` fournit de nombreux éléments spécialisés.
+
+```xml
+<msDesc>
+  <msIdentifier>
+    <country>France</country>
+    <settlement>Paris</settlement>
+    <repository>Archives Nationales</repository>
+    <collection>Commerce et industrie</collection>
+    <idno>F/12/5080</idno>
+  </msIdentifier>
+  <msContents>
+    <p><!-- description du contenu --></p>
+  </msContents>
+  <physDesc>
+    <p><!-- description physique --></p>
+  </physDesc>
+</msDesc>
+```
+
+???
+
+L'élément `sourceDesc` est obligatoire et sert à la description des manuscrits. Ici, le module `msdescription` fournit de nombreux éléments spécialisés.
+
+l'élément msDesc accueille la description du manuscrit.
+
+un seul élément obligatoire : msIdentifier
+Idno bonne pratique
+collection, etc.
+
+msContents : contenu intellectuel, il accueille une présentation succinte du contenu
+physDesc descripton physique
+
+Les élémenst sont ordonnés.
+
+---
+
+## msContents (dans msDesc)
+
+```xml
+<msContents>
+  <msItemStruct>
+    <author>
+    <persName xml:lang="fre" full="yes" ref="#desgodets">Desgodets,
+      Antoine (1653-1728)</persName>
+    <respStmt>
+      <resp key="com">collationneur</resp>
+      <persName xml:lang="fre" full="yes" ref="#pinardJean">Pinard,
+        Jean</persName>
+    </respStmt>
+    <title type="supplied">Traité de la Commodité</title>
+    <title type="full">Traité de la Commodité de l’architecture
+      concernant la distribution et les proportions des édifices</title>
+    <note>
+      <p>Suite du cours d’architecture prononcé par Antoine Desgodets
+        à l’Académie d’architecture concernant les Ordres.
+        Manuscrit incomplet, divisé en trois sections, la première
+        en cinq chapitres, la deuxième en deux chapitres, les
+        autres chapitres et la troisième section manquent.</p>
+      </note>
+      <textLang mainLang="fre" otherLangs="lat ita">texte en français,
+         quelques passages en latin et en italien.</textLang>
+    </msItemStruct>
+</msContents>
+```
+
+---
+
+### Description du support (dans msContent)
+
+```xml
+<physDesc>
+  <objectDesc form="codex">
+    <supportDesc material="paper">
+      <support>
+        <p><objectType>codex</objectType>, <material>papier à la cuve</material> avec filigranes, <watermark>raisins</watermark> similaire à <ref>[référence]</ref>, <date>1570-1758</date></p>
+      </support>
+      <extent>
+      <dimensions type="leaves">
+        <dim quantity="286" unit="leaves">286 pages, dont 42 planches</dim>
+        <height quantity="410" unit="mm" />
+        <width quantity="250" unit="mm" />
+        <depth quantity="40" unit="mm" />
+      </dimensions>
+      <!-- dimensions est répétable -->
+      </extent>
+      <foliation>foliotées au crayon en haut, au centre des pages</foliation>
+      <collation>le manuscrit est monté sur onglet</collation>
+      <condition>bon</condition>
+    </supportDesc>
+    <layoutDesc>
+      <layout columns="1" ruledLines="25 30">texte sur une colonne, 25 à 30 lignes réglées à la mine de plomb</layout>
+    <!-- layout est répétable -->
+    </layoutDesc>
+  </objectDesc>
+</physDesc>
+```
+
+---
+
+## Autres éléments pour la description physique (dans physDesc)
+
+```xml
+<physDesc>
+  <!-- ... -->
+  <handDesc>
+    <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
+  <!-- handNote est répétable, localisation avec locus -->
+    <handNote xml:id="c2Hand2" scope="minor">à l’encre noire</handNote>
+  </handDesc>
+  <decoDesc>
+    <decoNote>le manuscrit contient 42 planches au lavis d’une grande
+    qualité d’exécution</decoNote>
+  <!-- decoNote est répétable, localisation avec locus -->
+  </decoDesc>
+  <bindingDesc>
+    <binding>
+      <p>relié en <material>veau</material></p>
+      <condition>bon</condition>
+      <decoNote>dorure au fer</decoNote>
+    </binding>
+  </bindingDesc>
+</physDesc>
+```
+
+---
+
+# L'historique du manuscrit (dans msDesc)
+
+```xml
+<history>
+  <origin>
+    <p>Copié au cours du <origDate notBefore="1725" notAfter="1785">XVIII<hi rend="superscript">e</hi> siècle</origDate> ce manuscrit est pour ainsi dire en tous points identique à celui conservé au Rijk. La numérotation des planches semble indiquer qu’il a pu être copié d’après un même original.</p>
+    </origin>
+    <provenance>
+    <p>[Si nous avions eu des informations sur la provenance].</p>
+    </provenance>
+    <acquisition>
+      <p>Entré par le biais d’une acquisition du cabinet des Estampes de la bibliothèque du roi circa 1785.</p>
+      </acquisition>
+</history>
+<additional>
+  <surrogates>
+    <idno>microfilm R 710124-710264</idno>
+  </surrogates>
+  <!-- références bibliographiques sur l’exemplaire -->
+  <listBibl>
+    <bibl corresp="#scheurleer1964" />
+  </listBibl>
+</additional>
+```
 
 ---
 
@@ -201,5 +464,3 @@ class: center middle
 # Mettre [en pratique](ex03-teiHeader.html)
 
 .left[.footnote[[revenir au début](#index)]]
-
----

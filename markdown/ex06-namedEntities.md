@@ -9,7 +9,7 @@ class: inverse
 
 class: center middle
 
-# 05ex – corpus et structures complexes
+# 06ex – entitées nommées
 Formation TEI | ENC 27-30 octobre 2014
 
 .footnote[ https://github.com/emchateau/formEnc2014-10 ]
@@ -18,15 +18,15 @@ Formation TEI | ENC 27-30 octobre 2014
 
 layout: false
 
-## Traiter les facsimili de votre document
+# TP création d'un fichier d'autorité
 
-## Traiter les notes de commentaire historique
+[exemple](../exercices/)
 
 ---
 
 template: inverse
 class: center middle
 
-# On continue [avec les entitées-nommées](08-entités nommées.html)
+# À [demain](09-personnalisation.html) !
 
 .left[.footnote[[revenir au début](#index)]]

@@ -20,7 +20,7 @@ layout: false
 
 # teiHeader
 
-### [exemple](../exercices/teiheader.tei.xml)
+### [exemple](../exercices/)
 
 - traiter dans un teiHeader développé le manuscrit que vous avez choisi, en accordant une attention particulière à la description du manuscrit.
 
