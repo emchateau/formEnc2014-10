@@ -103,17 +103,16 @@ XPath 2.0 reconnaît comme types atomiques les types atomiques primitifs de XML
 La valeur d'une expression XPath 2.0 est toute séquence autorisée par le modèle de données.
 
 ---
+background-image: url(images/type-hierarchy.png)
 .left-column[
-## Expressions XPath
+
+## Types XPath
 ### [XML Data Model](http://www.w3.org/TR/xpath-datamodel/)
 ### [XML Schema](http://www.w3.org/TR/xmlschema-2/)
 ]
 
 .right-column[
-## types XPath
-![types XS](images/type-hierarchy.png)
 ]
-
 ---
 .left-column[
 ## Le modèle [XDM](http://www.w3.org/TR/xpath-datamodel/)
@@ -159,8 +158,8 @@ Mais il peut poser des problèmes de compatibilité avec XPath 1.0, bien qu'aya
 
 Comme nous venons de le voir, XPath permet d'écrire différents types d'expressions
 
-- arithmétiques
-- booléennes
+- arithmétiques ex. `1+2`
+- booléennes ex. `true()`
 - etc.
 
 Parmi ces expressions, celles de chemins (`path expressions`) représentent le cœur de ce langage dans la mesure où elles permettent de .red[sélectionner une séquence de nœuds] en spécifiant un chemin à suivre à partir d'un point de départ.
@@ -376,7 +375,7 @@ Un chemin peut se composer de plusieurs étapes, ou pas (.red[location steps]).
 
 - On distingue aussi les chemins absolus, partant de cette racine, des chemins relatifs.
 
-### un chemin XPath sera de la forme :
+#### un chemin XPath sera de la forme :
 
 pour un chemin absolu
 ```xpath
