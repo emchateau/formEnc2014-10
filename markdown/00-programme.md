@@ -128,27 +128,27 @@ name: programmeJour3
 
 - 09h30 – 10h00 : [09-Personnalisation de la TEI](09-personnalisation.html)
 
-- 10h00 – 11h00 : [ex08-TP Odd](ex07-odd.html)
+- 10h00 – 11h00 : [ex08-TP Odd](09-personnalisation.html#tp1)
 
 - 11H00 – 11H15 : Pause
 
-- 11h15 – 11h45 : [10-Choix d'un schéma, personnalisation](10-odd.html)
+- 11h15 – 11h45 : [10-Choix d'un schéma, personnalisation](09-personnalisation.html#tp2)
 
-- 11h45 – 12h30 : [ex08-TP personnalisation](ex08-odd.html)
+- 11h45 – 12h30 : [ex08-TP personnalisation](09-personnalisation.html#tp3)
 
 - 12H30 – 13H30 : Déjeuner
 
-- 13H30 – 14H00 : [11-Exploiter ses documents TEI](11-xpath00.html)
+- 13H30 – 14H00 : [11-Exploiter ses documents TEI](xpath00.html)
 
-- 14H00 – 14H30 : [12-Le modèle de données XDM](12-xpath01.html)
+- 14H00 – 14H30 : [12-Le modèle de données XDM](xpath01.html)
 
-- 15H00 – 15H30 : [13-Expression XPath](13-xpath02.html)
+- 15H00 – 15H30 : [13-Expression XPath](xpath02.html)
 
 - 15h30 – 15H45 : Pause
 
-- 15h45 – 16H30 : [ex09-Sélection dans un arbre](ex09-xpath03.html)
+- 15h45 – 16H30 : [ex09-Sélection dans un arbre](xpath03.html)
 
-- 16h30 – 17H30 : [ex10-Explorer ses documents TEI avec XPath](ex10-xpath04.html)
+- 16h30 – 17H30 : [ex10-Explorer ses documents TEI avec XPath](xpath04.html)
 
 ---
 
