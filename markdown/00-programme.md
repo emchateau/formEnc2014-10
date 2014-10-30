@@ -165,7 +165,7 @@ name: programmeJour4
 
 - 11h15 – 11h45 : [15-Règles modèles XSLT](15-xslt0.html)
 
-- 11h45 – 12h30 : [16-Introduction HTML](16-html00.html)
+- 11h45 – 12h30 : [16-HTML5 Pour les Humanistes](16-html5PourLesHumanistes.html)
 
 - 12H30 – 13H30 : Déjeuner
 
