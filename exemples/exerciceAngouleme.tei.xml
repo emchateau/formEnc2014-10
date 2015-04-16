@@ -4,6 +4,7 @@
 	schematypens="http://purl.oclc.org/dsdl/schematron"?>
 <?xml-stylesheet type="text/xsl" href="/Users/emmanuelchateau/Downloads/TEI-Boilerplate-master/teibp.xsl"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <!-- Commentaire de test -->
     <teiHeader>
         <fileDesc>
             <titleStmt>

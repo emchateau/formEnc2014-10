@@ -243,10 +243,10 @@
     <!-- règle par défaut d'interception des éléments non pris en charge -->
     <!-- cette règle s'applique à un élément si aucune autre instruction spécifique ne le concerne ; elle permet donc de voir ce qui reste à traiter ; pratique !! -->
     <!-- code Florence Clavaud -->
-    <xsl:template match="*">
+    <!--<xsl:template match="*">
         <span>
             <code style="color:red">
-                <!-- Attention ! l'utilisation de css dans l'attribut style n'est pas une bonne pratique -->
+                <!-\- Attention ! l'utilisation de css dans l'attribut style n'est pas une bonne pratique -\->
                 <xsl:text>&lt;</xsl:text>
                 <xsl:value-of select="name()" />
                 <xsl:for-each select="@*">
@@ -261,6 +261,6 @@
             <xsl:apply-templates />
             <code style="color:red">&lt;/<xsl:value-of select="name()" />&gt;</code>
         </span>
-    </xsl:template>
+    </xsl:template>-->
 
 </xsl:stylesheet>
