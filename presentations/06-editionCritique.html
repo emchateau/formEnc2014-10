@@ -33,8 +33,8 @@ class: center middle
 
 La TEI présente de nombreux mécanismes spécialement destinés à la prise en charge des éditions critiques.
 
-La pluspart placés dans le module `transcr`, d'autres dabs `msdescription`.
-Modules qui sont parfois à propos augmentés par `certainty`.
+La pluspart placés dans le module `transcr`, d'autres dans `msdescription`.
+Modules qui sont parfois, à propos, augmentés par `certainty`.
 
 ---
 
@@ -48,7 +48,7 @@ template: inverse
 .right-column[
 # Édition critique
 
-## 1. [L'inscription du texte sur le support](#inscription)
+## 1. [L’inscription du texte sur le support](#inscription)
 
 ## 2. [Les corrections éditoriales](#corrections)
 
@@ -62,7 +62,7 @@ name: inscription
 template: inverse
 class: center middle
 
-# .red[1.] L'inscription du texte sur le support
+# .red[1.] L’inscription du texte sur le support
 
 ---
 
@@ -108,7 +108,7 @@ layout: false
 <unclear agent="ink-blot" cert="low" resp="#EC" />
 ```
 
-### `suplied` restitution d'un passage manquant
+### `suplied` restitution d’un passage manquant
 
 ```xml
 <supplied reason="hole" source="#autreEd">les</supplied>
@@ -116,7 +116,7 @@ layout: false
 
 ???
 
-Ne pas confondre gap et space qui sert à désigner un espace blanc jugé significatif
+Ne pas confondre `gap` et `space` qui sert à désigner un espace blanc jugé significatif
 
 Plusieurs attributs issus du module `certainty` qui peuvent vous permettre de préciser la certitude des restitutions.
 
@@ -138,7 +138,7 @@ class: center middle
 
 ### `sic` passage fautif, ou segment syntaxiquement incorrect
 
-### `corr` correction de l'éditeur
+### `corr` correction de l’éditeur
 
 ### `abbr` abréviation
 
@@ -162,7 +162,7 @@ Même utilisation de choice possible pour les segments syntaxiquement incorrects
 </choice>
 ```
 
-Partout, utilisation des attributs @cert, @resp et @source qui peuvent s'avérer utile.
+Partout, utilisation des attributs @cert, @resp et @source qui peuvent s’avérer utile.
 
 ---
 
@@ -174,7 +174,7 @@ class: center middle
 
 ---
 
-# Description des mains
+# Description des mains (teiHeader)
 
 ### `@hand`
 
@@ -195,13 +195,13 @@ handNote est répétable et peut contenir une localisation avec locus.
 
 # Les variantes
 
-# Trois approches pour l'.red[alignement]
+# Trois approches pour l’.red[alignement]
 
 Les Guidelines proposent trois approches pour aligner des passages textuels lorsque l’on établit une édition critique :
 
 - la **méthode de localisation référencée**,	où les entrées d’apparat critique sont liées aux blocs de texte identifiés qui contiennent les lemmes respectifs
 
-- la **méthode d’attachement à double point**,	où les entrées d’apparat critique sont liées à des ponts de départ et de fin identifiées dans un texte
+- la **méthode d’attachement à double point**,	où les entrées d’apparat critique sont liées à des points de départ et de fin identifiées dans un texte
 
 - la **méthode de segmentation parallèle**,	où les entrées d’apparat critique son encodées au moyen d’une transcription du texte connu invariable et de tous les témoins.
 
@@ -212,7 +212,7 @@ Les Guidelines proposent trois approches pour aligner des passages textuels lors
 
 - la **méthode de localisation référencée**,	où les entrées d’apparat critique sont liées aux blocs de texte identifiés qui contiennent les lemmes respectifs
 
-- la **méthode d’attachement à double point**,	où les entrées d’apparat critique sont liées à des ponts de départ et de fin identifiées dans un texte
+- la **méthode d’attachement à double point**,	où les entrées d’apparat critique sont liées à des points de départ et de fin identifiées dans un texte
 
 - la **méthode de segmentation parallèle**,	où les entrées d’apparat critique son encodées au moyen d’une transcription du texte connu invariable et de tous les témoins.
 
@@ -220,35 +220,9 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 
 ---
 
-# Segmentation parallèle
+# Description des témoins (teiHeader)
 
-### `app` entrée d'apparat critique
-
-### `lem` lemme ou leçon retenue du texte
-
-### `rdg` variante (lecture)
-
-```xml
-<app>
-  <lem>remener</lem>
-  <rdg wit="#l-1-C #l-1-D #l-1-E #l-1-F">remettre</rdg>
-  <rdg wit="#l-#-a">conduire dehors</rdg>
-</app>
-```
-
----
-
-# Variantes
-
-### `rdgGrp` pour regrouper plusieurs variantes ayant un lien entre elles
-
-### `@type` pour catégoriser la variante
-
-### `@cause` pour expliciter la cause de la variante
-
----
-
-# Tableau de tradition
+(tableau de tradition)
 
 ```xml
 <listWit>
@@ -274,6 +248,50 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 
 ---
 
+# Segmentation parallèle
+
+### `app` entrée d’apparat critique
+
+### `lem` lemme ou leçon retenue du texte
+
+### `rdg` variante (lecture)
+
+```xml
+<app>
+  <lem>remener</lem>
+  <rdg wit="#l-1-C #l-1-D #l-1-E #l-1-F">remettre</rdg>
+  <rdg wit="#l-#-a">conduire dehors</rdg>
+</app>
+```
+
+---
+
+# Variantes
+
+### `rdgGrp` pour regrouper plusieurs variantes ayant un lien entre elles
+
+### `@type` pour catégoriser la variante
+
+### `@cause` pour expliciter la cause de la variante
+
+---
+
+# Groupes de variantes
+
+<p>Magnus es, domine, et laudabilis valde: <app>
+	<lem wit="#A">magna</lem>
+	<rdgGrp>
+		<rdg wit="#B"><sic>magma</sic></rdg>
+		<rdg wit="#E"><sic>maga</sic></rdg>
+	</rdgGrp>
+	<rdgGrp>
+		<rdg wit="#C">laudabilis</rdg>
+		<rdg wit="#D"><sic>laudablis</sic></rdg>
+	</rdgGrp>
+</app><note><p>This apparatus entry is an example using "rdgGrp" to group together variants. Here we have two groups, one presenting only spelling mistakes on the same reading as the lemma, while the second group has a different reading (with a spelling mistake for witness D)</p></note> virus [...]</p>
+
+---
+
 # Localisation référencée
 
 ```xml
@@ -295,7 +313,7 @@ La méthode par segmentation parallèle est le plus couramment utilisée lors de
 template: inverse
 class: center middle
 
-# Exemple d'[apparat critique](ex04-witness.html)
+# Exemple d’[apparat critique](ex04-witness.html)
 
 .left[.footnote[[revenir au début](#index)]]
 
