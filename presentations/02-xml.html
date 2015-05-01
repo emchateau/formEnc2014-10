@@ -142,6 +142,16 @@ Métalangage désormais utilisé partout en informatique qu’il s’agisse de s
 
 ---
 
+# XML en .red[4 points]
+
+### .red[1.] **XML ne sert pas à afficher les données mais à les décrire**. Seul, il ne fait rien. Appliqué à la représentation des textes, il permet de décrire notamment leur structure (livre, chapitre, paragraphe, phrase, mot, etc.)
+### .red[2.] **Le nom des balises n’est pas prédéfini** : on peut librement créer son propre vocabulaire
+### .red[3.] **On peut utiliser une "grammaire" de balises**, pour définir des contraintes ou s’assurer de la consistance de l’encodage
+### .red[4.] **XML est auto-descriptif et lisible par l’homme**. Un fichier XML n’est rien que du texte, on peut facilement prendre connaissance d’un corpus dans n’importe quel éditeur textuel
+
+
+---
+
 # Élément XML
 
 ![élément XML](images/xml01.svg)
@@ -157,7 +167,6 @@ Métalangage désormais utilisé partout en informatique qu’il s’agisse de s
 # balisage XML
 
 ![élément XML](images/xml00.svg)
-
 ---
 
 # Exemple de document XML
@@ -332,7 +341,7 @@ Règles pour l’écriture de ces noms (parfois appelés identificateurs gé
 
 ## Entités internes :
 
-- entités caractères prédéfinies ou non, pour saisir certains caractères que l’on doit obligatoirement coder ( <, >, &, ", ' : caractères codés au moyen des entités lt, gt, amp, quot, apos) ou difficiles à composer au clavier
+- entités caractères prédéfinies ou non, pour saisir certains caractères que l’on doit obligatoirement coder ( <, >, &, ", ’ : caractères codés au moyen des entités lt, gt, amp, quot, apos) ou difficiles à composer au clavier
 
 ## Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (.red[&]), suivi du nom donné à l’entité, suivi du signe .red[;]
 
@@ -437,7 +446,7 @@ Le contrôle se fait par analyse syntaxique ou parsing (avec des outils appele�
 
 - `<segment type="text">du texte</segment>`
 
-- `<segment type=’text’>du texte</segment>`
+- `<segment type='text'>du texte</segment>`
 
 - `<segment type=text>du texte</segment>`
 
@@ -491,7 +500,7 @@ name: biblio
 
 - A gentle introduction to XML : <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html>
 
-- XML en concentré : manuel de référence / Elliotte Rusty Harold & W. Scott Means; traduction de Philippe Ensarguet, Frédéric Laurent. - 3e éd. - Paris : O’Reilly, DL 2005. - 1 vol. (XX-760 p.) : couv. ill. en coul. ; 24 cm. - Index. - ISBN 2-84177-353-1 (br.) : 45 € - EAN 9782841773534 ;
+- XML en concentré : manuel de référence / Elliotte Rusty Harold & W. Scott Means; traduction de Philippe Ensarguet, Frédéric Laurent. - 3e éd. - Paris : O'Reilly, DL 2005. - 1 vol. (XX-760 p.) : couv. ill. en coul. ; 24 cm. - Index. - ISBN 2-84177-353-1 (br.) : 45 € - EAN 9782841773534 ;
 
 - L’espace XML francophone : actualités, discussions, articles et billets, sur le site Web <http://xmlfr.org/>
 ---
@@ -512,8 +521,8 @@ class: center middle
     <script src="remark.language.js" type="text/javascript"></script>
     <script type="text/javascript">
       var slideshow = remark.create({
-          highlightStyle: ’monokai’,
-          highlightLanguage: ’remark’
+          highlightStyle: 'monokai',
+          highlightLanguage: 'remark'
         }) ;
     </script>
 
