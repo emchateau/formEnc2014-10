@@ -36,11 +36,11 @@ template: inverse
 .right-column[
 # La macrostructure TEI
 
-## 1. [Structure d'un document TEI](#part1)
+## 1. [Structure d’un document TEI](#part1)
 
-## 2. [Le teiHeader](#part2)
+## 2. [Microstructures](#part2)
 
-## 3. [Macrostructure du texte](#part3)
+## 3. [Traitement des variantes](#part3)
 ]
 
 
@@ -92,41 +92,6 @@ Un document TEI se compose d'au moins deux parties :
 
 ---
 
-# Macrostructures de texte composite
-
-```xml
-<text>
-  <front><!-- ... --></front>
-  <group>
-    <text><!-- ... --></text>
-    <text><!-- ... --></text>
-    <text><!-- ... --></text>
-  </group>
-  <back><!-- ... --></back>
-</text>
-```
-
-## teiCorpus
-
-Dans le cas de corpus de textes hétérogènes, on utilisera des éléments `teiCorpus` comme élément racine comportant des éléments `TEI`
-
-```xml
-<teiCorpus
-  <TEI><!-- ... --></TEI>
-  <TEI><!-- ... --></TEI>
-</text>
-```
-
----
-
-name: part2
-template: inverse
-class: center middle
-
-# .red[2.] Le teiHeader
-
----
-
 # teiHeader minimal
 
 ```xml
@@ -155,81 +120,7 @@ On y trouvera notamment un élément sourceDesc obligatoire qui décrit le texte
 
 ---
 
-## teiHeader, mentions de responsabilité
-
-```xml
-<teiHeader>
-  <fileDesc>
-   <titleStmt>
-    <title xml:lang="fre" type="main">Sauval 1724</title>
-    <principal>
-      <persName ref="#MCL">
-        <forename>Marianne</forename>
-        <surname>Cojannot-Le Blanc</surname>
-      </persName>
-    </principal>
-    <funder>
-      <orgName>Labex Les Passés dans le Présent</orgName>
-      <date from="2013" to="2018">2013-2018</date>
-    </funder>
-    <respStmt>
-      <resp key="prg">modélisation XML-TEI</resp>
-      <persName ref="#EC">
-        <forename>Emmanuel</forename>
-        <surname>Château</surname>
-      </persName>
-    </respStmt><!-- ... -->
-   </titleStmt>
-   <editionStmt>
-     <edition n="1">première édition électronique, <date from="2013" to="2018">2013-2018</date></edition>
-   </editionStmt>
-  <!-- ... -->
-  </fileDesc>
-</teiHeader>
-```
-
----
-
-# mentions de publications
-
-```xml
-<teiHeader>
-  <!-- ... -->
-    <publicationStmt>
-      <authority>
-        <orgName>Histoire des Arts &amp; Représentations</orgName>
-            <orgName type="acronym">HAR</orgName>
-            <orgName type="alt">EA 4414</orgName>
-            <address> <addrLine>Université Paris Ouest-Nanterre La Défense</addrLine><addrLine>http://har.u-paris10.fr</addrLine> <addrLine>harparisouest@gmail.com</addrLine> </address>
-      </authority>
-      <date from="2014" to="2018">2014-2018</date>
-      <idno>ark</idno>
-      <!-- responsable de la publication -->
-      <publisher>
-        <orgName>Histoire des Arts &amp; Représentations</orgName>
-      </publisher>
-      <availability status="restricted" xml:id="gdpLicenceTextSauval1724">
-        <licence target="http://creativecommons.org/licenses/by-nc-sa/4.0/fr/">
-                  <p>Texte de la licence</p></licence>
-      </availability>
-    </publicationStmt>
-    <revisionDesc>
-         <change when="2014-04-15">Remaniement de l'entête et de la structure</change>
-    </revisionDesc>
-</teiHeader>
-```
-
----
-
-name: part3
-template: inverse
-class: center middle
-
-# .red[3.] Macrostructure du texte
-
----
-
-# Parties liminaires, postérieures
+# Macrostructures du texte
 
 ```xml
 <TEI>
@@ -259,7 +150,7 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 ---
 
-# Macrostructure du texte
+# Structuration du texte
 
 ### `body` corps de texte (fils de l'élément `text`)
 
@@ -275,7 +166,7 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 ---
 
-# Macrostructure du texte
+# Exemple de texte encodé
 
 ```xml
 <!-- ... -->
@@ -316,59 +207,17 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
   <!-- ... -->
 </text>
 ```
+---
+
+name: part2
+template: inverse
+class: center middle
+
+# .red[2.] Microstructures du texte
 
 ---
 
-# Structures de tableaux
-
-```xml
-<table>
-  <head><!-- titre --></head>
-  <!-- rangée -->
-  <row>
-    <cell><!-- contenu cellule --></cell>
-    <cell><!-- contenu cellule --></cell>
-    <cell><!-- contenu cellule --></cell>
-  </row>
-  <!-- rangée -->
-  <row>
-    <cell><!-- contenu cellule --></cell>
-    <cell><!-- contenu cellule --></cell>
-  </row>
-</table>
-```
-
----
-
-# Structures versifiées
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<body xmlns="http://www.tei-c.org/ns/1.0" n="spleenEtIdeal">
-    <div type="longPoem">
-        <head>Les Phares</head>
-        <lg type="stanza">
-            <l n="1">Rubens, fleuve d'oubli, jardin de la paresse,</l>
-            <l n="2">Oreiller de chair fraîche où l'on ne peut aimer,</l>
-            <l n="3">Mais où la vie afflue et s'agite sans cesse,</l>
-            <l n="4">Comme l'air dans le ciel et la mer dans la mer ;</l>
-        </lg>
-        <lg type="stanza">
-            <l n="5">Léonard de Vinci, miroir profond et sombre,</l>
-            <l n="6">Où des anges charmants, avec un doux souris</l>
-            <l n="7">Tout chargé de mystère, apparaissent à l'ombre</l>
-            <l n="8">Des glaciers et des pins qui ferment leur pays ;</l>
-        </lg>
-        <gap reason="sampling" quantity="9" unit="stanza"/>
-    </div>
-    <div type="shortPoem">
-        <head>La Muse malade</head>
-        <gap reason="sampling" quantity="4" unit="stanza"/>
-    </div>
-</body>
-```
-
----
+layout: false
 
 # Éléments d'usage courant
 
@@ -409,38 +258,155 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
 
 - `ref` référence
 
----
+layout: false
 
-# Pages de titre
+## Ajouts et surplus
+
+
+### `add` texte ajouté
 
 ```xml
-  <titlePage xml:lang="fre">
-    <!-- page de titre transcrite à l'identique -->
-    <docTitle>
-      <titlePart rend="capital">Histoire <lb />et <lb />recherches
-      <lb />des <lb />antiquités <lb />de la ville
-      <lb />de <lb/>Paris.</titlePart>
-      <titlePart rend="italic">Par M<hi rend="superscript">e</hi>
-       <persName rend="capital">Henri Sauval</persName> Avocat
-       <lb />au Parlement.</titlePart>
-      <titlePart>Tome premier.</titlePart>
-    </docTitle>
-    <metamark rend="culDeLampe" />
-    <docImprint>
-        <pubPlace>À Paris,</pubPlace>
-        <publisher>Chés Charles Moette, Libraire, rue de la Bouclerie à
-          St Alexis, près le Pont <abbr>St</abbr> Michel.</publisher>
-        <publisher>Chés Jacques Chardon, Imprimeur-Libraire, rue du
-          Petit-Pont, au bas de la rue <abbr>St</abbr> Jacques à la
-          Croix d'or.</publisher>
-        <docDate when="1724">M. DCC XXIV.</docDate>
-      </docImprint>
-    <imprimatur rend="capital">Avec privilège du Roy</imprimatur>
-  </titlePage>
+<add place="above">nous</add>
 ```
+
+### `del` texte supprimé
+
+```xml
+<del rend="overstrike">claustra</add>
+```
+
+### `subst` substitutions (génétique textuelle)
+
+```xml
+<subst>
+  <del>claustra</del>
+  <add place="margin">fenêtre</add>
+</subst>
+```
+
 ---
 
-# Tableau de tradition
+# Prise en charge des lacunes
+
+### `gap` passage ne pouvant pas être restitué pour des raisons matérielles
+
+```xml
+<gap reason="illegible" agent="ink-blot" />
+```
+
+### `unclear` passage en partie illisible
+
+```xml
+<unclear agent="ink-blot" cert="low" resp="#EC" />
+```
+
+### `suplied` restitution d’un passage manquant
+
+```xml
+<supplied reason="hole" source="#autreEd">les</supplied>
+```
+
+???
+
+Ne pas confondre `gap` et `space` qui sert à désigner un espace blanc jugé significatif
+
+Plusieurs attributs issus du module `certainty` qui peuvent vous permettre de préciser la certitude des restitutions.
+
+```
+xml<space quantity="1" unit="cm">
+```
+
+---
+
+# Passages fautifs
+
+### `sic` passage fautif, ou segment syntaxiquement incorrect
+
+### `corr` correction de l’éditeur
+
+### `abbr` abréviation
+
+### utilisation de `choice`
+
+```xml
+<choice>
+  <abbr>M<hi rend="superscript">r</hi></abbr>
+  <expan>Monsieur</abbr>
+</choice>
+```
+
+???
+
+Même utilisation de choice possible pour les segments syntaxiquement incorrects.
+
+```xml
+<choice>
+  <sic>charbone</sic>
+  <corr>charbon</corr>
+</choice>
+```
+
+Partout, utilisation des attributs @cert, @resp et @source qui peuvent s’avérer utile.
+
+---
+
+name: variantes
+template: inverse
+class: center middle
+
+# .red[3.] Les variantes et les mains
+
+---
+
+# Description des mains (teiHeader)
+
+### `@hand`
+
+### `handDesc` et ses sous-éléments dans le header
+
+```xml
+<handDesc>
+  <handNote xml:id="c2Hand1" scope="major">à l’encre noire</handNote>
+  <handNote xml:id="c2Hand2" scope="minor">au crayon</handNote>
+</handDesc>
+```
+
+???
+
+handNote est répétable et peut contenir une localisation avec locus.
+
+---
+
+# Les variantes
+
+# Trois approches pour l’.red[alignement]
+
+Les Guidelines proposent trois approches pour aligner des passages textuels lorsque l’on établit une édition critique :
+
+- la **méthode de localisation référencée**,	où les entrées d’apparat critique sont liées aux blocs de texte identifiés qui contiennent les lemmes respectifs
+
+- la **méthode d’attachement à double point**,	où les entrées d’apparat critique sont liées à des points de départ et de fin identifiées dans un texte
+
+- la **méthode de segmentation parallèle**,	où les entrées d’apparat critique son encodées au moyen d’une transcription du texte connu invariable et de tous les témoins.
+
+
+???
+
+Les Guidelines proposent trois approches pour aligner des passages textuels lorsque l’on établit une édition critique :
+
+- la **méthode de localisation référencée**,	où les entrées d’apparat critique sont liées aux blocs de texte identifiés qui contiennent les lemmes respectifs
+
+- la **méthode d’attachement à double point**,	où les entrées d’apparat critique sont liées à des points de départ et de fin identifiées dans un texte
+
+- la **méthode de segmentation parallèle**,	où les entrées d’apparat critique son encodées au moyen d’une transcription du texte connu invariable et de tous les témoins.
+
+La méthode par segmentation parallèle est le plus couramment utilisée lors de l’encodage de sources en XML-TEI pour comparer des témoins. Cette méthode correspond également à une méthode de travail pour l’établissement du texte.
+
+---
+
+# Description des témoins (teiHeader)
+
+(tableau de tradition)
 
 ```xml
 <listWit>
@@ -457,30 +423,63 @@ Cette macrostructure peut-être plus compliquée en fonction de la nature des pr
   </witness>
   <witness xml:id="B">
     <msDesc>
-      <msIdentifier>
-        <country>France</country>
-        <settlement>Paris</settlement>
-        <repository>Archives nationales</repository>
-        <collection>Monuments ecclésiastiques</collection>
-        <idno>LL1157 p. 383b-384b, n° XXXVI</idno>
-        <msName>Cartulaire blanc de l’abbaye de Saint-Denis, tome I</msName>
-      </msIdentifier>
-      <msContents>
-        <msItem>
-          <rubric xml:lang="lat" >De dimidio arpento vinee nobis vendito a Petro de Cellario <num value="36">XXXVI</num></rubric>
-        </msItem>
-      </msContents>
+      <!-- ... -->
     </msDesc>
   </witness>
+  <!-- répéter l'élément witness autant de fois que de témoins -->
 </listWit>
 ```
+
+---
+
+# Segmentation parallèle
+
+### `app` entrée d’apparat critique
+
+### `lem` lemme ou leçon retenue du texte
+
+### `rdg` variante (lecture)
+
+```xml
+<app>
+  <lem>remener</lem>
+  <rdg wit="#l-1-C #l-1-D #l-1-E #l-1-F">remettre</rdg>
+  <rdg wit="#l-#-a">conduire dehors</rdg>
+</app>
+```
+
+---
+
+# Variantes
+
+### `rdgGrp` pour regrouper plusieurs variantes ayant un lien entre elles
+
+### `@type` pour catégoriser la variante
+
+### `@cause` pour expliciter la cause de la variante
+
+---
+
+# Groupes de variantes
+
+<p>Magnus es, domine, et laudabilis valde: <app>
+	<lem wit="#A">magna</lem>
+	<rdgGrp>
+		<rdg wit="#B"><sic>magma</sic></rdg>
+		<rdg wit="#E"><sic>maga</sic></rdg>
+	</rdgGrp>
+	<rdgGrp>
+		<rdg wit="#C">laudabilis</rdg>
+		<rdg wit="#D"><sic>laudablis</sic></rdg>
+	</rdgGrp>
+</app><note><p>This apparatus entry is an example using "rdgGrp" to group together variants. Here we have two groups, one presenting only spelling mistakes on the same reading as the lemma, while the second group has a different reading (with a spelling mistake for witness D)</p></note> virus [...]</p>
 
 ---
 
 template: inverse
 class: center middle
 
-# Maintenant, passons à [la pratique](ex02-teiMacrostructure.html) !
+# Merci !
 
 .left[.footnote[[revenir au début](#index)]]
 
