@@ -197,46 +197,46 @@ Le document comporte également des *attributs*. Ce sont des **paires nom-valeur
 
 # Le corps du document XML : un .red[arbre d'éléments]
 
-- Les éléments : permettent de décomposer le texte en unités d’information
+- Les éléments : permettent de décomposer le texte en unités d’information
 
 ```xml
- <titre>Le corps du document XML : un arbre d’éléments</titre>
+ <titre>Le corps du document XML : un arbre d’éléments</titre>
 ```
 
-- **Tout élément a un nom** (parfois appelé identificateur générique), ici c’est titre.
+- **Tout élément a un nom** (parfois appelé identificateur générique), ici c’est titre.
 
-- **Un élément peut contenir du texte et/ou d’autres éléments, ou être vide**.
+- **Un élément peut contenir du texte et/ou d’autres éléments, ou être vide**.
 
-- Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est **l’élément racine**.
+- Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est **l’élément racine**.
 
 
 ???
 
 # Le corps du document XML : un arbre d'éléments
 
-## Les éléments : permettent de décomposer le texte en unités d’information
+## Les éléments : permettent de décomposer le texte en unités d’information
 
 
 ```xml
  <titre>Le corps du document XML : un arbre
- d’éléments</titre>
+ d’éléments</titre>
 ```
 
-La portion de texte ainsi isolée est marquée par une balise de début (balise ouvrante <titre>) et par une balise de fin (balise fermante </titre>)
+La portion de texte ainsi isolée est marquée par une balise de début (balise ouvrante <titre>) et par une balise de fin (balise fermante </titre>)
 
-## Tout élément a un nom (parfois appelé identificateur générique), ici c’est titre.
+## Tout élément a un nom (parfois appelé identificateur générique), ici c’est titre.
 
-## Un élément peut contenir du texte et/ou d’autres éléments, ou être vide.
+## Un élément peut contenir du texte et/ou d’autres éléments, ou être vide.
 
-## Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est l’élément racine.
+## Il existe un et un seul élément englobant tous les autres, encodé en premier, juste après le prologue : c’est l’élément racine.
 
 ---
 
 # Les .red[attributs]
 
-Les attributs précisent la signification des éléments, leur ajoutent des caractéristiques
+Les attributs précisent la signification des éléments, leur ajoutent des caractéristiques
 
-- Sont toujours saisis à l’intérieur de la balise ouvrante de l’élément
+- Sont toujours saisis à l’intérieur de la balise ouvrante de l’élément
 
 - Syntaxe : nomAttribut="valeur":
 
@@ -244,24 +244,24 @@ Les attributs précisent la signification des éléments, leur ajoutent des c
 <date when="2011-03-09">9 mars 2011</date>
 ```
 
-- le nom de l’attribut obéit aux contraintes syntaxiques des noms XML
+- le nom de l’attribut obéit aux contraintes syntaxiques des noms XML
 
-- la valeur est encadrée par des guillemets simples ou doubles.
+- la valeur est encadrée par des guillemets simples ou doubles.
 
-- L’ordre des attributs n’est pas prescrit pour un élément donné
+- L’ordre des attributs n’est pas prescrit pour un élément donné
 
-- Un attribut doit nécessairement avoir une valeur, même si cette valeur est nulle
+- Un attribut doit nécessairement avoir une valeur, même si cette valeur est nulle
 
-- Pour un même élément, il ne peut y avoir deux attributs de même nom.
+- Pour un même élément, il ne peut y avoir deux attributs de même nom.
 
 
 ???
 
 # Les .red[attributs]
 
-Les attributs précisent la signification des éléments, leur ajoutent des caractéristiques
+Les attributs précisent la signification des éléments, leur ajoutent des caractéristiques
 
-- Sont toujours saisis à l’intérieur de la balise ouvrante de l’élément
+- Sont toujours saisis à l’intérieur de la balise ouvrante de l’élément
 
 - Syntaxe : nomAttribut="valeur":
 
@@ -269,31 +269,31 @@ Les attributs précisent la signification des éléments, leur ajoutent des c
 <date when="2011-03-09">9 mars 2011</date>
 ```
 
-- le nom de l’attribut obéit aux contraintes syntaxiques des noms XML
+- le nom de l’attribut obéit aux contraintes syntaxiques des noms XML
 
-- la valeur est encadrée par des guillemets simples ou doubles.
+- la valeur est encadrée par des guillemets simples ou doubles.
 
-- L’ordre des attributs n’est pas prescrit pour un élément donné
+- L’ordre des attributs n’est pas prescrit pour un élément donné
 
-- Un attribut doit nécessairement avoir une valeur, même si cette valeur est nulle
+- Un attribut doit nécessairement avoir une valeur, même si cette valeur est nulle
 
-- Pour un même élément, il ne peut y avoir deux attributs de même nom.
+- Pour un même élément, il ne peut y avoir deux attributs de même nom.
 
-> Les attributs ne contiennent que du texte, peuvent donc servir pour stocker de l’information qui n’est pas elle-même structurée.
+> Les attributs ne contiennent que du texte, peuvent donc servir pour stocker de l’information qui n’est pas elle-même structurée.
 
-> En principe ne sont pas destinés à ajouter du contenu à l’élément, donc leur valeur n’est pas destinée à être affichée telle quelle dans un format de sortie. Mais ils pourront être exploités par des applications informatiques pour faire par exemple des index, ils peuvent servir à identifier les éléments (attributs de type ID), à établir des renvois (attributs de type IDREF).
+> En principe ne sont pas destinés à ajouter du contenu à l’élément, donc leur valeur n’est pas destinée à être affichée telle quelle dans un format de sortie. Mais ils pourront être exploités par des applications informatiques pour faire par exemple des index, ils peuvent servir à identifier les éléments (attributs de type ID), à établir des renvois (attributs de type IDREF).
 
 ---
 
-# Les noms des éléments (et des attributs)
+# Les noms des éléments (et des attributs)
 
-Règles pour l’écriture de ces noms (parfois appelés identificateurs génériques) :
+Règles pour l’écriture de ces noms (parfois appelés identificateurs génériques) :
 
-- la chaîne de caractères formant le nom peut contenir les caractères alphanumériques (lettres de a à z, et de A à Z, chiffres de 0 à 9, caractères non latins), le trait sous la ligne, le trait d’union et le point (à l’exclusion de tout autre signe de ponctuation ou blanc) ;
+- la chaîne de caractères formant le nom peut contenir les caractères alphanumériques (lettres de a à z, et de A à Z, chiffres de 0 à 9, caractères non latins), le trait sous la ligne, le trait d’union et le point (à l’exclusion de tout autre signe de ponctuation ou blanc) ;
 
 - un nom ne peut pas commencer par un nombre, ni par un point, ni par un trait d’union ;
 
-- le nom ne peut pas commencer par "xml" (quelle que soit la casse utilisée).
+- le nom ne peut pas commencer par "xml" (quelle que soit la casse utilisée).
 
 - Attention ! XML est sensible à la casse.
 
@@ -301,32 +301,32 @@ Règles pour l’écriture de ces noms (parfois appelés identificateurs gé
 
 # Les entités
 
-## Entités internes :
+## Entités internes :
 
-- entités caractères prédéfinies ou non, pour saisir certains caractères que l’on doit obligatoirement coder ( <, >, &, ", ’ : caractères codés au moyen des entités lt, gt, amp, quot, apos) ou difficiles à composer au clavier
+- entités caractères prédéfinies ou non, pour saisir certains caractères que l’on doit obligatoirement coder ( <, >, &, ", ’ : caractères codés au moyen des entités lt, gt, amp, quot, apos) ou difficiles à composer au clavier
 
-## Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (.red[&]), suivi du nom donné à l’entité, suivi du signe .red[;]
+## Un appel d’entité dans le corps du document XML se fait en utilisant l’esperluette (.red[&]), suivi du nom donné à l’entité, suivi du signe .red[;]
 
 ???
 
-Les entités : des réserves de contenu, la plupart du temps à déclarer (dans la DTD) et utilisables n’importe où dans le document
+Les entités : des réserves de contenu, la plupart du temps à déclarer (dans la DTD) et utilisables n’importe où dans le document
 
 
-## entités texte,
+## entités texte,
 
-servant à donner un nom à des expressions ou phrases souvent répétées
+servant à donner un nom à des expressions ou phrases souvent répétées
 
-## Entités externes :
+## Entités externes :
 
 - texte : fragments XML formant chacun un fichier
 
-- non parsées (fichiers non XML tels qu’images, enregistrements sonores...)
+- non parsées (fichiers non XML tels qu’images, enregistrements sonores...)
 
 ---
 
 ## Les commentaires :
 
-- Servent à... commenter, utiles pour documenter ce qu’on fait ou consigner des notes. Ne sont pas destinés aux programmes informatiques, qui les ignorent par défaut.
+- Servent à... commenter, utiles pour documenter ce qu’on fait ou consigner des notes. Ne sont pas destinés aux programmes informatiques, qui les ignorent par défaut.
 
 - Commencent par .red[<!--] et se terminent par .red[-->]
 
@@ -335,11 +335,11 @@ servant à donner un nom à des expressions ou phrases souvent répétées
 ## Les instructions de traitement :
 - Commencent par .red[<?] et se terminent par .red[?>].
 
-- Définissent une cible (fournissent le nom de l’application à qui elles sont destinées, par ex.), et des arguments
+- Définissent une cible (fournissent le nom de l’application à qui elles sont destinées, par ex.), et des arguments
 
 ## Sections CDATA
 
-sections de caractères non parsées. Commencent par `[! [CDATA[` et se terminent par `]]`.
+sections de caractères non parsées. Commencent par `[! [CDATA[` et se terminent par `]]`.
 
 ---
 
@@ -347,8 +347,8 @@ sections de caractères non parsées. Commencent par `[! [CDATA[` et se termin
 
 ```xml
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-  <teiHeader><!-- autres éléments --></teiHeader>
-  <text><!-- autres éléments --></text>
+  <teiHeader><!-- autres éléments --></teiHeader>
+  <text><!-- autres éléments --></text>
 </TEI>
 ```
 
@@ -360,43 +360,43 @@ sections de caractères non parsées. Commencent par `[! [CDATA[` et se termin
 
 ???
 
-De plus en plus souvent, afin de faciliter les échanges en évitant toute ambiguité, les noms des éléments et attributs sont rattachés à un namespace (espace de noms).
+De plus en plus souvent, afin de faciliter les échanges en évitant toute ambiguité, les noms des éléments et attributs sont rattachés à un namespace (espace de noms).
 
-- Formellement un espace de noms est défini par son URI (namespace-uri).
+- Formellement un espace de noms est défini par son URI (namespace-uri).
 
-- Si on utilise un ou plusieurs espaces de noms, l’espace de noms (ou les espaces de noms) utilisé(s) doivent être déclarés dans le fichier XML. On le fait le plus souvent en ajoutant un (ou plusieurs) attribut(s) xmlns à l’élément racine du fichier. Un attribut xmlns a pour valeur l’URI d’un espace de noms.
+- Si on utilise un ou plusieurs espaces de noms, l’espace de noms (ou les espaces de noms) utilisé(s) doivent être déclarés dans le fichier XML. On le fait le plus souvent en ajoutant un (ou plusieurs) attribut(s) xmlns à l’élément racine du fichier. Un attribut xmlns a pour valeur l’URI d’un espace de noms.
 
-- L’espace de noms peut être déclaré comme l’espace de noms par défaut, dans ce cas l’URI n’est pas associée à un code donné et les noms des attributs et éléments ne sont pas préfixés.
+- L’espace de noms peut être déclaré comme l’espace de noms par défaut, dans ce cas l’URI n’est pas associée à un code donné et les noms des attributs et éléments ne sont pas préfixés.
 
-- Un code peut en effet représenter l’espace de noms, il est alors utilisé à la place de l’URI pour préfixer attributs et éléments ; ce code est appelé préfixe (namespace- prefix).
+- Un code peut en effet représenter l’espace de noms, il est alors utilisé à la place de l’URI pour préfixer attributs et éléments ; ce code est appelé préfixe (namespace- prefix).
 
 
 # Exemple
 
-Ici l’espace de noms par défaut est défini par l’URI http://www.tei-c.org/ns/1.0, c'est l’espace de noms TEI. Tous les éléments du fichier XML qui sont descendants de l’élément racine et qui ne sont pas préfixés sont dans cet espace de noms.
+Ici l’espace de noms par défaut est défini par l’URI http://www.tei-c.org/ns/1.0, c'est l’espace de noms TEI. Tous les éléments du fichier XML qui sont descendants de l’élément racine et qui ne sont pas préfixés sont dans cet espace de noms.
 
 ---
 
 # Document .red[bien formé]
 
-- concordance entre l’encodage du document et sa déclaration XML;
+- concordance entre l’encodage du document et sa déclaration XML;
 
-- existence des fichiers déclarés (déclaration de DTD, déclaration de fichiers entités
-externes) et concordance entre encodage des fichiers entités externes et leur
-déclaration XML;
+- existence des fichiers déclarés (déclaration de DTD, déclaration de fichiers entités
+externes) et concordance entre encodage des fichiers entités externes et leur
+déclaration XML;
 
-- forme des appels d’entités ;
+- forme des appels d’entités ;
 
-- présence de **balises ouvrantes et fermantes appariées**, imbrication des balises sans
+- présence de **balises ouvrantes et fermantes appariées**, imbrication des balises sans
 chevauchement ;
 
-- respect des spécifications relatives aux noms XML (noms d’éléments et d’attributs) ;
+- respect des spécifications relatives aux noms XML (noms d’éléments et d’attributs) ;
 
-- unicité des attributs dans un même élément, aucun attribut sans valeur
+- unicité des attributs dans un même élément, aucun attribut sans valeur
 
 - forme des commentaires.
 
-Le contrôle se fait par analyse syntaxique ou parsing (avec des outils appelés parsers).
+Le contrôle se fait par analyse syntaxique ou parsing (avec des outils appelés parsers).
 
 ---
 
@@ -428,25 +428,25 @@ Le contrôle se fait par analyse syntaxique ou parsing (avec des outils appele�
 
 # Modèles de documents
 
-Rappel : définissent les contraintes que doit respecter une certaine classe de documents
-Diverses syntaxes peuvent être utilisées pour écrire de tels modèles :
+Rappel : définissent les contraintes que doit respecter une certaine classe de documents
+Diverses syntaxes peuvent être utilisées pour écrire de tels modèles :
 
-- celle des DTD (partie intégrante de la norme XML 1.0), la plus utilisée encore aujourd’hui ;
+- celle des DTD (partie intégrante de la norme XML 1.0), la plus utilisée encore aujourd’hui ;
 
-- celle, exprimée en XML, des schémas XML (norme du W3C publiée en mai 2001 ; 2e édition octobre 2004 ; voir <http://www.w3.org/XML/Schema> ) ;
+- celle, exprimée en XML, des schémas XML (norme du W3C publiée en mai 2001 ; 2e édition octobre 2004 ; voir <http://www.w3.org/XML/Schema> ) ;
 
-- celle des schémas RelaxNG (norme ISO/IEC 19757-2 depuis 2003, amendée en 2008 ; voir <http://www.relaxng.org/>).
+- celle des schémas RelaxNG (norme ISO/IEC 19757-2 depuis 2003, amendée en 2008 ; voir <http://www.relaxng.org/>).
 
-Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’opérera de transformation à partir d’un document XML associé à un modèle que si ce document XML est valide.
+Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’opérera de transformation à partir d’un document XML associé à un modèle que si ce document XML est valide.
 
 ???
 
-Les schémas, qui peuvent s’écrire en XML quelle que soit la syntaxe choisie, permettent de contraindre plus fortement que les DTD le contenu des attributs et des éléments, et gèrent les espaces de noms.
-Un parseur sachant interpréter la syntaxe utilisée pourra vérifier qu’un document est conforme à un modèle donné (est valide).
+Les schémas, qui peuvent s’écrire en XML quelle que soit la syntaxe choisie, permettent de contraindre plus fortement que les DTD le contenu des attributs et des éléments, et gèrent les espaces de noms.
+Un parseur sachant interpréter la syntaxe utilisée pourra vérifier qu’un document est conforme à un modèle donné (est valide).
 
-Exemples de parseurs : ceux intégrés aux éditeurs XML, aux navigateurs Web ; xmllint dans la librairie libxml, etc.
+Exemples de parseurs : ceux intégrés aux éditeurs XML, aux navigateurs Web ; xmllint dans la librairie libxml, etc.
 
-Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’opérera de transformation à partir d’un document XML associé à un modèle que si ce document XML est valide.
+Beaucoup d’applications XML sont validantes, ainsi un processeur XSLT n’opérera de transformation à partir d’un document XML associé à un modèle que si ce document XML est valide.
 
 ---
 
@@ -464,9 +464,10 @@ name: biblio
 
 - A gentle introduction to XML : <http://www.tei-c.org/release/doc/tei-p5-doc/en/html/SG.html>
 
-- XML en concentré : manuel de référence / Elliotte Rusty Harold & W. Scott Means; traduction de Philippe Ensarguet, Frédéric Laurent. - 3e éd. - Paris : O'Reilly, DL 2005. - 1 vol. (XX-760 p.) : couv. ill. en coul. ; 24 cm. - Index. - ISBN 2-84177-353-1 (br.) : 45 € - EAN 9782841773534 ;
+- XML en concentré : manuel de référence / Elliotte Rusty Harold & W. Scott Means; traduction de Philippe Ensarguet, Frédéric Laurent. - 3e éd. - Paris : O'Reilly, DL 2005. - 1 vol. (XX-760 p.) : couv. ill. en coul. ; 24 cm. - Index. - ISBN 2-84177-353-1 (br.) : 45 € - EAN 9782841773534 ;
 
-- L’espace XML francophone : actualités, discussions, articles et billets, sur le site Web <http://xmlfr.org/>
+- L’espace XML francophone : actualités, discussions, articles et billets, sur le site Web <http://xmlfr.org/>
+
 ---
 
 template: inverse
